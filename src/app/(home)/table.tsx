@@ -1,9 +1,9 @@
 "use client";
 import { Transition } from "@headlessui/react";
-import { useSearchParams } from "next/navigation";
 
 import { ReleaseSchema } from "@/app/(home)/schema";
 import { Fragment, useState } from "react";
+import queryString from "query-string";
 
 import { match } from "ts-pattern";
 import ReactMarkdown from "react-markdown";
@@ -13,29 +13,43 @@ import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa6";
 import Balancer from "react-wrap-balancer";
 import { cn } from "@/lib/utils";
+import {
+  NumberParam,
+  StringParam,
+  useQueryParams,
+  withDefault,
+} from "use-query-params";
+import { useRouter } from "next/navigation";
 
 interface TableProps {
   data: ReleaseSchema;
+  dataLength: number;
 }
 
-export default function Table({ data }: TableProps) {
-  const searchParams = useSearchParams();
-  const filter = searchParams.get("filter");
-  const search = searchParams.get("search");
+export default function Table({ data, dataLength }: TableProps) {
+  const router = useRouter();
 
-  if (filter) {
-    if (filter === "pre-release") {
+  const [query, setQuery] = useQueryParams({
+    filter: StringParam,
+    search: StringParam,
+    show: withDefault(NumberParam, 30),
+  });
+
+  if (query.filter) {
+    if (query.filter === "pre-release") {
       data = data.filter((v) => v.prerelease);
     }
 
-    if (filter === "release") {
+    if (query.filter === "release") {
       data = data.filter((v) => !v.prerelease && !v.draft);
     }
   }
 
-  if (search) {
-    data = data.filter((v) => v.name.includes(search));
+  if (query.search) {
+    data = data.filter((v) => v.name.includes(query.search || ""));
   }
+
+  data = data.slice(0, query.show);
 
   const groupedData = groupByVersion(data);
 
@@ -86,7 +100,7 @@ export default function Table({ data }: TableProps) {
         <FilterButton />
       </div>
 
-      <div className="mt-4 flow-root">
+      <div className="mt-4 flow-root pb-10">
         <div className="-mx-4 -my-2 sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
             <table className="min-w-full border-separate border-spacing-0">
@@ -233,6 +247,31 @@ export default function Table({ data }: TableProps) {
                 ))}
               </tbody>
             </table>
+
+            {query.show < dataLength && (
+              <div className="justify-center items-center flex flex-col">
+                <Button
+                  size="sm"
+                  onClick={() => {
+                    const newQuery = queryString.stringify(
+                      {
+                        ...query,
+                        show: query.show + 20,
+                      },
+                      {
+                        skipNull: true,
+                      },
+                    );
+
+                    router.push(`/?${newQuery}`, {
+                      scroll: false,
+                    });
+                  }}
+                >
+                  Show more...
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </div>

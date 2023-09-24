@@ -2,7 +2,7 @@ import { releaseSchema } from "@/app/(home)/schema";
 import Table from "@/app/(home)/table";
 import { Metadata } from "next";
 
-export const dynamic = "force-static";
+export const fetchCache = "force-cache";
 
 export const metadata: Metadata = {
   title: "Next.js Releases",
@@ -15,9 +15,6 @@ const fetchAllReleases = async () => {
   const fetchRelease = async (page: number) => {
     const resp = await fetch(
       `https://api.github.com/repos/vercel/next.js/releases?page=${page}&per_page=100`,
-      {
-        cache: "force-cache",
-      },
     ).then((resp) => resp.json());
 
     if (!resp.length) {
@@ -45,7 +42,7 @@ export default async function Home() {
   return (
     <main className="container mx-auto sm:px-6 lg:px-8">
       <div className="mt-8">
-        <Table data={data} />
+        <Table data={data} dataLength={data.length} />
       </div>
     </main>
   );
