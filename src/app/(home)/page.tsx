@@ -2,12 +2,7 @@ import { releaseSchema } from "@/app/(home)/schema";
 import Table from "@/app/(home)/table";
 import { Metadata } from "next";
 
-interface Props {
-  searchParams: {
-    filter?: string;
-    search?: string;
-  };
-}
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Next.js Releases",
@@ -42,26 +37,10 @@ const fetchAllReleases = async () => {
   return releases;
 };
 
-export default async function Home({ searchParams }: Props) {
-  const { filter, search } = searchParams;
-
+export default async function Home() {
   const resp = await fetchAllReleases();
 
   let data = releaseSchema.parse(resp);
-
-  if (filter) {
-    if (filter === "pre-release") {
-      data = data.filter((v) => v.prerelease);
-    }
-
-    if (filter === "release") {
-      data = data.filter((v) => !v.prerelease && !v.draft);
-    }
-  }
-
-  if (search) {
-    data = data.filter((v) => v.name.includes(search));
-  }
 
   return (
     <main className="container mx-auto sm:px-6 lg:px-8">

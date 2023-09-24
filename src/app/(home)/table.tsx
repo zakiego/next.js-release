@@ -1,5 +1,6 @@
 "use client";
 import { Transition } from "@headlessui/react";
+import { useSearchParams } from "next/navigation";
 
 import { ReleaseSchema } from "@/app/(home)/schema";
 import { Fragment, useState } from "react";
@@ -19,6 +20,24 @@ interface TableProps {
 }
 
 export default function Table({ data }: TableProps) {
+  const searchParams = useSearchParams();
+  const filter = searchParams.get("filter");
+  const search = searchParams.get("search");
+
+  if (filter) {
+    if (filter === "pre-release") {
+      data = data.filter((v) => v.prerelease);
+    }
+
+    if (filter === "release") {
+      data = data.filter((v) => !v.prerelease && !v.draft);
+    }
+  }
+
+  if (search) {
+    data = data.filter((v) => v.name.includes(search));
+  }
+
   const groupedData = groupByVersion(data);
 
   const [isShowContent, setIsShowContent] = useState(new Map());
