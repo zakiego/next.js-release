@@ -85,33 +85,37 @@ export default function Table({ data }: TableProps) {
         <FilterInput />
         <FilterButton />
       </div>
+
       <div className="mt-4 flow-root">
-        <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div className="-mx-4 -my-2 sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-            <table className="min-w-full">
-              {/*  */}
+            <table className="min-w-full border-separate border-spacing-0">
               <thead className="bg-white">
                 <tr>
                   <th
                     scope="col"
-                    className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-3"
+                    className="border-b-[1px] sticky top-0 z-10 bg-opacity-75 backdrop-blur backdrop-filter py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-3"
+                    // className="sm:pl-6 lg:pl-8"
                   >
                     Version
                   </th>
                   <th
                     scope="col"
-                    className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    className="border-b-[1px] sticky top-0 z-10 bg-opacity-75 backdrop-blur backdrop-filter  px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                   >
                     Type
                   </th>
                   <th
                     scope="col"
-                    className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    className="border-b-[1px] sticky top-0 z-10 bg-opacity-75 backdrop-blur backdrop-filter  px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                   >
                     Published
                   </th>
 
-                  <th scope="col" className="py-3.5">
+                  <th
+                    scope="col"
+                    className="border-b-[1px] sticky top-0 z-10 bg-opacity-75 backdrop-blur backdrop-filter py-3.5"
+                  >
                     <span className="sr-only">Edit</span>
                   </th>
                 </tr>
@@ -123,7 +127,9 @@ export default function Table({ data }: TableProps) {
                       <th
                         colSpan={5}
                         scope="colgroup"
-                        className="bg-gray-50 py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-3"
+                        className="
+                        border-b-[1px] sticky top-12 z-10 bg-opacity-75 backdrop-blur backdrop-filter
+                        bg-gray-50 py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-3"
                       >
                         {group.version}
                       </th>
