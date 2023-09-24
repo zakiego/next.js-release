@@ -59,7 +59,7 @@ export const FilterInput = () => {
   };
 
   return (
-    <div className="w-fit">
+    <div className="w-full md:w-fit mt-4 md:mt-0">
       <Input placeholder="Search version" onChange={onChange} />
     </div>
   );

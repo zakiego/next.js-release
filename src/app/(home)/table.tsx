@@ -10,10 +10,9 @@ import ReactMarkdown from "react-markdown";
 import { groupByVersion } from "@/app/(home)/utils";
 import { FilterButton, FilterInput } from "@/app/(home)/filter";
 import { Button } from "@/components/ui/button";
-
-function classNames(...classes: any) {
-  return classes.filter(Boolean).join(" ");
-}
+import { FaGithub } from "react-icons/fa6";
+import Balancer from "react-wrap-balancer";
+import { cn } from "@/lib/utils";
 
 interface TableProps {
   data: ReleaseSchema;
@@ -64,21 +63,28 @@ export default function Table({ data }: TableProps) {
 
   return (
     <div className="">
-      <div className="sm:flex sm:items-center">
-        <div className="sm:flex-auto">
-          <h1 className="text-4xl font-extrabold text-gray-900">
-            Next.js Releases
-          </h1>
-          <p className="mt-2 text-sm text-gray-700">
-            A list of releases for the Next.js framework.
-          </p>
+      <div className="flex justify-between items-start">
+        <div className="sm:flex sm:items-center">
+          <div className="sm:flex-auto">
+            <h1 className="text-4xl font-extrabold text-gray-900">
+              <Balancer>Next.js Releases</Balancer>
+            </h1>
+            <p className="mt-2 text-sm text-gray-700">
+              <Balancer>A list of releases for the Next.js framework.</Balancer>
+            </p>
+          </div>
         </div>
+        <a
+          href="https://github.com/zakiego/next.js-release"
+          className="opacity-80 hover:opacity-90"
+        >
+          <FaGithub size="2.6rem" />
+        </a>
       </div>
-      <div className="mt-8 md:mt-4 space-y-5 md:space-y-0 flex flex-col md:flex-row md:justify-between md:items-center ">
+      <div className="mt-8 md:mt-4 flex flex-col-reverse md:flex-row md:justify-between md:items-center ">
         <FilterInput />
         <FilterButton />
       </div>
-
       <div className="mt-4 flow-root">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
@@ -133,7 +139,7 @@ export default function Table({ data }: TableProps) {
                       return (
                         <Fragment key={item.name}>
                           <tr
-                            className={classNames(
+                            className={cn(
                               itemIdx === 0
                                 ? "border-gray-300"
                                 : "border-gray-200",
