@@ -1,7 +1,7 @@
 import { releaseSchema } from "@/app/(home)/schema";
 import Table from "@/app/(home)/table";
 import { Metadata } from "next";
-
+import * as fs from "fs";
 export const fetchCache = "force-cache";
 
 export const metadata: Metadata = {
@@ -10,28 +10,9 @@ export const metadata: Metadata = {
 };
 
 const fetchAllReleases = async () => {
-  let releases: any[] = [];
+  const releases = await fs.readFileSync("./public/data.json", "utf-8");
 
-  const fetchRelease = async (page: number) => {
-    const resp = await fetch(
-      `https://api.github.com/repos/vercel/next.js/releases?page=${page}&per_page=100`,
-    ).then((resp) => resp.json());
-
-    if (!resp.length) {
-      console.log("Done");
-      console.log(resp);
-      return;
-    }
-
-    if (resp.length) {
-      releases = [...releases, ...resp];
-      await fetchRelease(page + 1);
-    }
-  };
-
-  await fetchRelease(1);
-
-  return releases;
+  return JSON.parse(releases);
 };
 
 export default async function Home() {
