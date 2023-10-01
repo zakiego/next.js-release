@@ -22,7 +22,7 @@ jobs:
         run: bun install
 
       - name: Start
-        run: bun start
+        run: bun run src/lib/data.ts
 
       - name: Configure Git
         run: |
