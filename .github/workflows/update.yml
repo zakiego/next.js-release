@@ -1,0 +1,49 @@
+name: Update Release Data
+
+on:
+  push
+  # schedule:
+  #   - cron: "0 * * * *" # Run every hour
+
+jobs:
+  auto-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Start
+        run: bun start
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Check for file changes
+        id: file-changed
+        run: |
+          git add -A  # Stage all changes, including new and deleted files
+          git status --porcelain  # Check for any changes in the working directory
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Changes detected."
+            echo "::set-output name=changed::true"
+          else
+            echo "No changes detected."
+          fi
+
+      - name: Commit and push changes
+        if: steps.file-changed.outputs.changed == 'true'
+        run: |
+          git add .
+          git commit -m "Update release data"
+          git push origin main
