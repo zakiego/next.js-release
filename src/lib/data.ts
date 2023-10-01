@@ -1,7 +1,7 @@
 import { Octokit } from "@octokit/rest";
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN,
+  auth: process.env.OCTOKIT_TOKEN,
 });
 
 export const saveToJson = async (data: any, path: string) => {
