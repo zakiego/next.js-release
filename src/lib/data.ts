@@ -19,7 +19,7 @@ type ReleaseData = Awaited<
 >["data"][number];
 
 const getLatestReleaseData = async () => {
-  const latestRelease = Bun.file("/public/data.json");
+  const latestRelease = Bun.file("./public/data.json");
   return await latestRelease.json();
 };
 
@@ -58,7 +58,7 @@ const fetchReleases = async () => {
     console.log(`Total releases: ${releases.length}`);
     console.log("Done");
     console.log(`Latest release: ${releases[0].name}`);
-    await saveToJson(releases, "/public/data.json");
+    await saveToJson(releases, "./public/data.json");
   }
 };
 
