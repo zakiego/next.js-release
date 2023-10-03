@@ -1,5 +1,9 @@
 import { z } from "zod";
 
+import { remark } from "remark";
+import remarkGfm from "remark-gfm";
+import remarkGithub from "remark-github";
+
 export const releaseSchema = z.array(
   z.object({
     url: z.string(),
@@ -8,7 +12,16 @@ export const releaseSchema = z.array(
     prerelease: z.boolean(),
     draft: z.boolean(),
     published_at: z.string(),
-    body: z.string(),
+    body: z.string().transform(async (body) => {
+      const html = await remark()
+        .use(remarkGfm)
+        .use(remarkGithub, {
+          repository: "vercel/next.js",
+        })
+        .process(body);
+
+      return html.toString();
+    }),
   }),
 );
 

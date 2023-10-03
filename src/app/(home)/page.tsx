@@ -18,7 +18,7 @@ const fetchAllReleases = async () => {
 export default async function Home() {
   const resp = await fetchAllReleases();
 
-  let data = releaseSchema.parse(resp);
+  const data = await releaseSchema.parseAsync(resp);
 
   return (
     <main className="container mx-auto sm:px-6 lg:px-8">
