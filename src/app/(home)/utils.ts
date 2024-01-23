@@ -1,11 +1,11 @@
-import { ReleaseSchema } from "@/app/(home)/schema";
+import { ReleaseSchema } from "@/lib/schema";
 
 export function groupByVersion(
   data: ReleaseSchema,
 ): { version: string; releases: ReleaseSchema }[] {
   const grouped: { version: string; releases: ReleaseSchema }[] = [];
 
-  data.forEach((release) => {
+  for (const release of data) {
     const versionMatch = release.name.match(/v(\d+\.\d+)/);
     if (versionMatch) {
       const version = `v${versionMatch[1]}`;
@@ -16,13 +16,14 @@ export function groupByVersion(
         grouped.push({ version, releases: [release] });
       }
     }
-  });
+  }
 
   return grouped;
 }
 
 export type GroupByVersion = ReturnType<typeof groupByVersion>;
 
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 export function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
