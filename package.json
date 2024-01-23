@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:generate": "drizzle-kit generate:sqlite",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "db:studio": "drizzle-kit studio",
+    "db:update": "tsx src/script/update.ts"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
@@ -16,8 +20,11 @@
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.16",
+    "better-sqlite3": "^9.3.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "dotenv": "^16.3.2",
+    "drizzle-orm": "^0.29.3",
     "eslint": "8.50.0",
     "eslint-config-next": "13.5.2",
     "lucide-react": "^0.279.0",
@@ -43,7 +50,10 @@
   },
   "devDependencies": {
     "@octokit/rest": "^20.0.2",
+    "@types/better-sqlite3": "^7.6.8",
     "bun-types": "^1.0.3",
-    "eslint-plugin-unused-imports": "^3.0.0"
+    "drizzle-kit": "^0.20.13",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "tsx": "^4.7.0"
   }
 }
