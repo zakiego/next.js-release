@@ -1,30 +1,73 @@
-import { releaseSchema } from "@/app/(home)/schema";
 import Table from "@/app/(home)/table";
 import { Metadata } from "next";
-import * as fs from "fs";
+import { dbClient, dbSchema } from "@/db";
+import { releaseSchema } from "@/lib/schema";
+import { and, desc, eq, like } from "drizzle-orm";
+import { remark } from "remark";
+import remarkGfm from "remark-gfm";
+import remarkGithub from "remark-github";
+
 export const fetchCache = "force-cache";
 
 export const metadata: Metadata = {
-  title: "Next.js Releases",
-  description: "A list of releases for the Next.js framework.",
+	title: "Next.js Releases",
+	description: "A list of releases for the Next.js framework.",
 };
 
-const fetchAllReleases = async () => {
-  const releases = await fs.readFileSync("./public/data.json", "utf-8");
+interface Props {
+	searchParams: {
+		filter: "pre-release" | "release" | undefined;
+		search: string | undefined;
+		show: string | undefined;
+	};
+}
 
-  return JSON.parse(releases);
-};
+export default async function Home(props: Props) {
+	const { searchParams } = props;
 
-export default async function Home() {
-  const resp = await fetchAllReleases();
+	const selectQuery = dbClient
+		.select()
+		.from(dbSchema.releases)
+		.orderBy(desc(dbSchema.releases.published_at))
+		.where(
+			and(
+				searchParams.search
+					? like(dbSchema.releases.name, `%${searchParams.search}%`)
+					: undefined,
+				searchParams.filter === "pre-release"
+					? eq(dbSchema.releases.prerelease, 1)
+					: undefined,
+				searchParams.filter === "release"
+					? and(
+							eq(dbSchema.releases.prerelease, 0),
+							eq(dbSchema.releases.draft, 0),
+					  )
+					: undefined,
+			),
+		)
+		.limit(searchParams.show ? parseInt(searchParams.show) + 1 : 31);
 
-  const data = await releaseSchema.parseAsync(resp);
+	const resp = await selectQuery.execute();
 
-  return (
-    <main className="container mx-auto sm:px-6 lg:px-8">
-      <div className="mt-8">
-        <Table data={data} dataLength={data.length} />
-      </div>
-    </main>
-  );
+	const data = await releaseSchema.parse(resp);
+	const formatBody = data.map((release) => {
+		return {
+			...release,
+			body: remark()
+				.use(remarkGfm)
+				.use(remarkGithub, {
+					repository: "vercel/next.js",
+				})
+				.processSync(release.body)
+				.toString(),
+		};
+	});
+
+	return (
+		<main className="container mx-auto sm:px-6 lg:px-8">
+			<div className="mt-8">
+				<Table data={formatBody} dataLength={data.length} />
+			</div>
+		</main>
+	);
 }

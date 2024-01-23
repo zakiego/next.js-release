@@ -3,64 +3,69 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-import { useQueryParam, StringParam, withDefault } from "use-query-params";
+import {
+	StringParam,
+	withDefault,
+	useQueryParams,
+	NumberParam,
+} from "use-query-params";
 
 export function FilterButton() {
-  const [filter, setFiler] = useQueryParam(
-    "filter",
-    withDefault(StringParam, ""),
-  );
+	const [query, setQuery] = useQueryParams({
+		filter: withDefault(StringParam, ""),
+		show: withDefault(NumberParam, 30),
+	});
 
-  const isPreRelease = filter === "pre-release";
-  const isRelease = filter === "release";
+	const isPreRelease = query.filter === "pre-release";
+	const isRelease = query.filter === "release";
 
-  return (
-    <div className="flex space-x-4">
-      <Button
-        size="sm"
-        variant={isPreRelease ? "default" : "secondary"}
-        onClick={() => {
-          if (isPreRelease) {
-            setFiler("");
-          } else {
-            setFiler("pre-release");
-          }
-        }}
-      >
-        Pre-release
-      </Button>
-      <Button
-        size="sm"
-        variant={isRelease ? "default" : "secondary"}
-        onClick={() => {
-          if (isRelease) {
-            setFiler("");
-          } else {
-            setFiler("release");
-          }
-        }}
-      >
-        Release
-      </Button>
-    </div>
-  );
+	return (
+		<div className="flex space-x-4">
+			<Button
+				size="sm"
+				variant={isPreRelease ? "default" : "secondary"}
+				onClick={() => {
+					if (isPreRelease) {
+						setQuery({ filter: "", show: 30 });
+					} else {
+						setQuery({ filter: "pre-release", show: 30 });
+					}
+				}}
+			>
+				Pre-release
+			</Button>
+			<Button
+				size="sm"
+				variant={isRelease ? "default" : "secondary"}
+				onClick={() => {
+					if (isRelease) {
+						setQuery({ filter: "", show: 30 });
+					} else {
+						setQuery({ filter: "release", show: 30 });
+					}
+				}}
+			>
+				Release
+			</Button>
+		</div>
+	);
 }
 
 export const FilterInput = () => {
-  const [search, setSearch] = useQueryParam(
-    "search",
-    withDefault(StringParam, ""),
-  );
+	const [query, setQuery] = useQueryParams({
+		search: withDefault(StringParam, ""),
+		show: withDefault(NumberParam, 30),
+	});
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTimeout(() => {
-      setSearch(e.target.value);
-    }, 500);
-  };
+	const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setTimeout(() => {
+			setQuery({ search: e.target.value, show: 30 });
+		}, 500);
+	};
 
-  return (
-    <div className="w-full md:w-fit mt-4 md:mt-0">
-      <Input placeholder="Search version" onChange={onChange} />
-    </div>
-  );
+	return (
+		<div className="w-full md:w-fit mt-4 md:mt-0">
+			<Input placeholder="Search version" onChange={onChange} />
+		</div>
+	);
 };
