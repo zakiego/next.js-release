@@ -1,0 +1,22 @@
+CREATE TABLE `releases` (
+	`url` text,
+	`assets_url` text,
+	`upload_url` text,
+	`html_url` text,
+	`id` integer PRIMARY KEY NOT NULL,
+	`author` text,
+	`node_id` text,
+	`tag_name` text,
+	`target_commitish` text,
+	`name` text NOT NULL,
+	`draft` integer,
+	`prerelease` integer,
+	`created_at` text,
+	`published_at` text,
+	`assets` text,
+	`tarball_url` text,
+	`zipball_url` text,
+	`body` text,
+	`reactions` text,
+	`mentions_count` integer
+);
