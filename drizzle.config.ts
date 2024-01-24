@@ -1,12 +1,12 @@
 import type { Config } from "drizzle-kit";
 import "dotenv/config";
-import { DATABASE_URL } from "@/db";
+import { env } from "@/lib/env";
 
 export default {
   schema: "./src/db/schema",
   out: "./src/db/migrations",
-  driver: "better-sqlite",
+  driver: "libsql",
   dbCredentials: {
-    url: DATABASE_URL,
+    url: env.DATABASE_URL,
   },
 } satisfies Config;
