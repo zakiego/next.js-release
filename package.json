@@ -21,7 +21,6 @@
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.16",
-    "better-sqlite3": "^9.3.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "dotenv": "^16.3.2",
@@ -51,7 +50,6 @@
   },
   "devDependencies": {
     "@octokit/rest": "^20.0.2",
-    "@types/better-sqlite3": "^7.6.8",
     "bun-types": "^1.0.3",
     "drizzle-kit": "^0.20.13",
     "eslint-plugin-unused-imports": "^3.0.0",
