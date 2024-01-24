@@ -6,8 +6,7 @@ import { and, desc, eq, like } from "drizzle-orm";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkGithub from "remark-github";
-
-export const fetchCache = "force-cache";
+import { unstable_cache } from "next/cache";
 
 export const metadata: Metadata = {
 	title: "Next.js Releases",
@@ -47,9 +46,16 @@ export default async function Home(props: Props) {
 		)
 		.limit(searchParams.show ? parseInt(searchParams.show) + 1 : 31);
 
-	const resp = await selectQuery.execute();
+	const cacheKey = `${searchParams.filter}-${searchParams.search}-${searchParams.show}`;
 
-	const data = await releaseSchema.parse(resp);
+	const selectQueryCached = unstable_cache(
+		async () => selectQuery.execute(),
+		[cacheKey],
+	);
+
+	const resp = await selectQueryCached();
+
+	const data = releaseSchema.parse(resp);
 	const formatBody = data.map((release) => {
 		return {
 			...release,
