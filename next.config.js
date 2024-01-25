@@ -2,6 +2,10 @@
 const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ["@libsql/client"],
+    logging: {
+      level: "verbose",
+      fullUrl: true,
+    },
   },
 };
 
