@@ -1,5 +1,60 @@
 [
   {
+    "url": "https://api.github.com/repos/vercel/next.js/releases/348338848",
+    "assets_url": "https://api.github.com/repos/vercel/next.js/releases/348338848/assets",
+    "upload_url": "https://uploads.github.com/repos/vercel/next.js/releases/348338848/assets{?name,label}",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.76",
+    "id": 348338848,
+    "author": {
+      "login": "next-js-bot[bot]",
+      "id": 279046576,
+      "node_id": "BOT_kgDOEKHpsA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/3491438?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/next-js-bot%5Bbot%5D",
+      "html_url": "https://github.com/apps/next-js-bot",
+      "followers_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOBC3Cis4Uwzqg",
+    "tag_name": "v16.3.0-canary.76",
+    "target_commitish": "canary",
+    "name": "v16.3.0-canary.76",
+    "draft": false,
+    "immutable": false,
+    "prerelease": true,
+    "created_at": "2026-07-02T23:37:12Z",
+    "updated_at": "2026-07-03T00:04:49Z",
+    "published_at": "2026-07-03T00:04:49Z",
+    "assets": [],
+    "tarball_url": "https://api.github.com/repos/vercel/next.js/tarball/v16.3.0-canary.76",
+    "zipball_url": "https://api.github.com/repos/vercel/next.js/zipball/v16.3.0-canary.76",
+    "body": "### Misc Changes\n\n- Fix navigation getting reverted when a Server Action is in flight: #95391\n- Fix false-positive nested-cache error for a short default profile: #95373\n- Skip saving `expire: 0` values in the default cache handler in prod: #95363\n- [ci] Disable mid-stack PR optimization for native PR stacks: #95427\n- Fix history push getting treated like replace when followed by refresh: #95392\n- Upgrade React from `ec0fca31-20260701` to `3508aee6-20260702`: #95410\n- fix(config): correctly validate cacheHandlers names: #95358\n- [ci] Actually migrate Turbopack jobs back to ARM: #95386\n- Recover from blocking routes under Instant Navigation lock when deployed: #95227\n- Make Instant Navigation Testing full-page loads work when deployed: #95222\n- Clear a resurrected instant cookie on unlock so a hard reload recovers: #95398\n- fix: handle prototype-colliding segment names in segment explorer trie: #95403\n- Prefetch links nearest the top of the document first: #95393\n- Fix metadata title dropped on soft navigation with Cache Components: #95315\n- Cache short-`expire` `'use cache'` values across dev reloads: #95362\n\n### Credits \n\nHuge thanks to @gaearon, @unstubbable, @bgw, @vercel-release-bot, @Partha-Shankar, @icyJoseph, and @acdlite for helping!",
+    "reactions": {
+      "url": "https://api.github.com/repos/vercel/next.js/releases/348338848/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 1,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "mentions_count": 7
+  },
+  {
     "url": "https://api.github.com/repos/vercel/next.js/releases/347938406",
     "assets_url": "https://api.github.com/repos/vercel/next.js/releases/347938406/assets",
     "upload_url": "https://uploads.github.com/repos/vercel/next.js/releases/347938406/assets{?name,label}",
@@ -40,6 +95,18 @@
     "tarball_url": "https://api.github.com/repos/vercel/next.js/tarball/v16.3.0-canary.75",
     "zipball_url": "https://api.github.com/repos/vercel/next.js/zipball/v16.3.0-canary.75",
     "body": "### Misc Changes\n\n- [cd] Replace the release package with our own GitHub release creation: #95352\n- [test] Enable deploy tests for the Instant Navigation Testing API suite: #95236\n- Await reused in-flight prefetch entries under Instant Navigation lock: #95301\n- [test] Park the blocking-fallback segment on a withheld param: #95300\n- Make `instant()` resilient to a leaked navigation-testing cookie: #95375\n- [ci] Avoid running full CI mid-stack for GH-native stacks, same as we do for Graphite: #95218\n- Remove 'silence this warning' from instant validation fix output: #95187\n- fix(turbopack): allow `#/` prefixed subpath import specifiers: #94461\n\n### Credits \n\nHuge thanks to @eps1lon, @unstubbable, @bgw, @aurorascharff, and @sleitor for helping!",
+    "reactions": {
+      "url": "https://api.github.com/repos/vercel/next.js/releases/347938406/reactions",
+      "total_count": 2,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 1,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
     "mentions_count": 5
   },
   {
@@ -85,15 +152,15 @@
     "body": "Contains no changes except publishing `@next/swc-wasm-web` which was accidentally not published since 16.2.4.",
     "reactions": {
       "url": "https://api.github.com/repos/vercel/next.js/releases/347694311/reactions",
-      "total_count": 7,
+      "total_count": 9,
       "+1": 0,
       "-1": 0,
-      "laugh": 2,
+      "laugh": 3,
       "hooray": 1,
       "confused": 0,
       "heart": 0,
       "rocket": 0,
-      "eyes": 4
+      "eyes": 5
     }
   },
   {
@@ -89942,14 +90009,14 @@
     "body": "### Core Changes\r\n\r\n- perf: fix server trace file logic : #56898\r\n- feat: drop Node.js 16: #56896\r\n- Update React from d900fadbf to 09fbee89d. Removes server context and experimental prefix for server action APIs: #56809\r\n- feat(env): upgrade `dotenv`: #38481\r\n- Update Babel dependencies: #51962\r\n- perf: fix tracing for routes: #56924\r\n- build: Update `swc_core` to `v0.86.1`: #56770\r\n- feat: set status code to 500 if unexpected error occurs before streaming in app router: #56236\r\n- cache: add unstable_noStore API: #56930\r\n- Adding <GoogleTagManager> component to @next/third-parties: #56106\r\n- Replace `Promise.withResolvers` polyfill with `DetachedPromise`: #56954\r\n- chore(next/image)!: mark `onLoadingComplete` as deprecated in favor of `onLoad`: #56944\r\n- chore: lower Node.js version requirement: #56943\r\n- fix typos: #56870\r\n- Update React from 09fbee89d to a41957507: #56970\r\n- Reland \"feat(turbopack): support basic next/dynamic\": #56934\r\n- Add `@mui/icons-material` to the default `optimizePackageImports` list: #56801\r\n- add better logs around worker restarts: #57004\r\n- Handle Promise Rejections for Streams: #56976\r\n- Web Streams cleanup: #56819\r\n- chore(next/image): remove deprecation of `onLoadingComplete` temporarily: #57020\r\n- Revert \"chore(next/image): remove deprecation of `onLoadingComplete` temporarily\": #57024\r\n- Improve performance of String.prototype.split uses: #56746\r\n- chore: support progressive jpg with sharp: #56617\r\n- Move ImageResponse to next/og: #56662\r\n- Prefer module over main on main fields for app router server compiler: #56960\r\n- chore: upgrade `jest`: #56909\r\n- chore: drop `undici`: #56899\r\n- Bump packages version to match canary versions: #57071\r\n- codemod: migrate ImageResponse imports: #57074\r\n- chore(next/image)!: mark `domains` as deprecated in favor `remotePatterns`: #57062\r\n- Code frame and sourcemapped error support for Turbopack: #56727\r\n- Update flakey build trace case: #57092\r\n- build: don't error when bundling optional peer deps: #57073\r\n- Expose Experimental Taint APIs: #56507\r\n- Update font data: #57094\r\n- Upgrade edge-runtime/cookies: #57124\r\n- Remove warning messages: #57087\r\n- Add retry for fetching subsetted Google Fonts: #56583\r\n- Update React from a41957507 to d803f519e: #57015\r\n- prefer Option<Vc<IssueSource>> over Vc<OptionIssueSource>: #57104\r\n- chore: drop `form-data`: #57141\r\n- chore: drop web streams polyfilling on `globalThis`: #57077\r\n- chore: create template from `next-edge-ssr-loader`: #56715\r\n- Remove the experimental `serverActions` flag: #57145\r\n- Route Handler Types: #57070\r\n- Revert \"Add retry for fetching subsetted Google Fonts\": #57154\r\n- Display experimental features for next build: #57152\r\n- Cleanup Request Meta: #57144\r\n- chore: move layer from chunking context to asset context: #57149\r\n- Turbopack: support more server code in tracing error stack frames: #57156\r\n- misc: fix injecting --inspect with NODE_OPTIONS: #57159\r\n- Encoding and decoding variables of Server Actions from the closure: #56377\r\n- Remove printing fixed issues for Turbopack: #57188\r\n- Refactor code: #57189\r\n- Polish auto create layout warning color: #57190\r\n- improve server actions error when on unsupported node version: #57191\r\n- Fix two tests that use exportPathMap for Turbopack: #57194\r\n- fix(loader_tree): propagate metadata to corresponding layout: #56956\r\n- Polish the error message when using \"use client\" from a client action: #57164\r\n- fix(next-core): align edge chunking context's asset root: #57022\r\n- Leverage defineEnv for all environment variables in Turbopack: #57196\r\n- perf: memory usage tweaks: #57163\r\n- update turbopack: #57176\r\n- Move webpack aliases into separate file: #57233\r\n- Remove scheduler/tracing alias as the file no longer exists: #57234\r\n- test: stablize the metadata url tests: #57204\r\n- Polish turbopack start logging: #57203\r\n- Remove reactServerCondition property as it is not used: #57236\r\n- Add CompilerAliases Type: #57237\r\n- Turbopack: fix over-invalidation of node.js assets: #57240\r\n- Simplify options passed to createWebpackAliases: #57239\r\n- Fix relative metadata url resolving on windows: #57265\r\n- Improve encryption of Server Actions closure arguments: #57227\r\n- chore: fix a typo: #57272\r\n- Fix unmatched WebSocket upgrade requests being closed: #57245\r\n- perf: fix memory leaks in the edge runtime in dev: #57235\r\n- chore(export)!: remove `next export` in favor of `output: export` in next.config.js: #57085\r\n- Simplify iv prefixing of Server Actions encryption: #57274\r\n- Update Pathname Normalizers: #57161\r\n- Move logging option to stable: #56791\r\n- Polish compiling and turbopack logging: #57270\r\n- Revalidate Header Updates: #57162\r\n- Enhance Buffered Transform Stream: #57267\r\n- React Aliases: #57283\r\n- perf: remove `parse-body` from the server runtime: #57280\r\n- Improve encryption of Server Actions bound values: #57297\r\n- Add `__nextjs_pure` helper : #57286\r\n- only log export-no-custom-routes warning if unsupported: #57298\r\n- revert \"React Aliases (#57283)\": #57299\r\n- Fix client reference proxies: #57301\r\n- fix(turbopack): write manifests for edge app pages and use proper edge entry: #56675\r\n- Partial Prerendering: #57287\r\n- Optimize server bundle size: #57305\r\n- misc: fix bundling of experimental: #57311\r\n- Fix no-store/revalidate 0 inside of unstable_cache: #57313\r\n- update turbopack and add HMR test case: #57304\r\n- Fix nested unstable_cache revalidating: #57316\r\n- Revert \"Add `__nextjs_pure` helper \": #57318\r\n- bundle analyzer artifacts: #57307\r\n- PPR Fetch Fix: #57327\r\n- feat: Add `__nextjs_pure` back: #57328\r\n- Fix trace ignores: #57331\r\n- PPR Support: #57319\r\n- fix: ensure generateStaticParams isn't required for PPR: #57333\r\n- `taint` flag should enable experimental react in turbopack: #57315\r\n- Fix app ISR error handling: #57332\r\n- fix metadata url resolving with path posix: #57343\r\n- Get rid of semver from the server bundle: #57321\r\n- fix(next_core): align remove trailing slash: #57344\r\n- perf: avoid using raw-body for server actions: #57358\r\n- fix(next-core): apply correct jsx transform context for ssr: #57300\r\n- Refactor code: #57382\r\n- Fix request body hanging when middleware is preset: #57381\r\n- Turbopack: inject chunk group list file into the page for server component CSS: #57376\r\n- Viewport exports: #57302\r\n- Add websocket to server-external-packages: #57389\r\n- turbopack: Implement Server Actions from Client Components: #57391\r\n- Refactor swc options: #57369\r\n- Ensure unstable_cache revalidate option enables ISR: #57390\r\n- Fix logging removed experiments in start logs: #57373\r\n- fix(next-core): adjust og alias: #57431\r\n- Turbopack: avoid crashing when server actions can't parse the file: #57424\r\n- Turbopack: avoid sending serverComponentChanges with errors: #57425\r\n- update turbopack: #57420\r\n- handle finish building message on client side: #57363\r\n- remove invalid argument: #57438\r\n- misc: build output rework: #57440\r\n- types: mark ImageResponse from next/server deprecated: #57372\r\n- Fix deploy id env handling when disabled: #57374\r\n- codemods: migrate viewport related metadata export to viewport export : #57436\r\n- Process Client -> RSC Server Actions as TS: #57454\r\n- Apply react-server transform and valication to middleware: #57448\r\n- fix(turbopack): don't emit issues when parsing the segment config for non js files: #57452\r\n- fix(next-core): fix determining dynamic route: #57435\r\n- Add deprecation warning for disabling swc minifier: #57453\r\n- Turbopack: Improve error handling: #57386\r\n- refactor: simplify swc loaders configuration: #57457\r\n- Ignore postponed rejections: #57456\r\n- types: mark ImageResponse from next/server deprecated: #57372\r\n- Fix deploy id env handling when disabled: #57374\r\n- codemods: migrate viewport related metadata export to viewport export : #57436\r\n- Process Client -> RSC Server Actions as TS: #57454\r\n- Apply react-server transform and valication to middleware: #57448\r\n- fix(turbopack): don't emit issues when parsing the segment config for non js files: #57452\r\n- fix(next-core): fix determining dynamic route: #57435\r\n- Add deprecation warning for disabling swc minifier: #57453\r\n- Turbopack: Improve error handling: #57386\r\n- refactor: simplify swc loaders configuration: #57457\r\n- Ignore postponed rejections: #57456\r\n- use postcss transforms consistently also on server side: #57434\r\n- feat(turbopack): add support for parallel routes and route interception: #57450\r\n- Apply react-server condition for pages api: #57459\r\n- Remove wasm target: #57437\r\n- add better messaging around wrapping postpone with try/catch: #57446\r\n- misc: fix unhandled err worker hook : #57465\r\n- misc: fix build output: #57466\r\n- turbopack: Fix Server Actions in Edge runtime: #57462\r\n- Fix Regex: #57461\r\n- perf: enable webpack build worker: #57346\r\n- fix turbopack invalidations: #57362\r\n- fix(turbopack): make layout in group not cause a 404: #57471\r\n- fix turbopack invalidations: #57362\r\n- fix(turbopack): make layout in group not cause a 404: #57471\r\n- add node:url alias: #57478\r\n- update turbopack: #57469\r\n- Turbopack: add HMR update message: #57476\r\n- Revert \"fix turbopack invalidations (#57362)\": #57480\r\n- Filter out CSS files from middleware files and client reference chunks: #57482\r\n- turbopack: Support Actions in both RSC and Client layers: #57475\r\n- Fix missing SWC transforms for optimized barrel files: #57474\r\n- if there are errors during postpone, or postpone was caught, fail static generation: #57477\r\n- Add deprecation warning for disabling output file tracing: #57467\r\n- Move serverActionsBodySizeLimit to serverActions.bodySizeLimit: #57433\r\n- Update React from a9985529f to 8c8ee9ee6: #57483\r\n- update turbopack: #57485\r\n- fix client-only alias in SSRed client components: #57484\r\n- revert ppr logging changes: #57486\r\n- Don't terminate PPR renders with dynamicUsageErr: #57488\r\n- update turbopack: #57487\r\n- revert \"Apply react-server condition for pages api (#57459)\": #57500\r\n- Revert \"Apply react-server transform and valication to middleware (#5…: #57504\r\n\r\n### Documentation Changes\r\n\r\n- Docs: Add documentation for next/third-parties: #57345\r\n- Update 05-mdx.mdx . Fix key of the prop: #56883\r\n- chore(docs): fix missing fallback on next/image sizes example: #56718\r\n- Fix typos in duplicate-sass.mdx: #57045\r\n\r\n### Example Changes\r\n\r\n- chore: Refactor with-supabase example to use ssr package: #57100\r\n- Fix: catch expected error in with-supabase example: #57378\r\n\r\n### Misc Changes\r\n\r\n- improve next-image-proxy test: #56893\r\n- chore(test): test remote image from proxy: #56895\r\n- ensure kodiak is re-added to apps list after code-freeze action: #56907\r\n- chore: reduce `fs-extra` usage in `scripts/`: #56917\r\n- chore(test): set `COREPACK_ENABLE_STRICT: 0` for create-next-app tests: #56955\r\n- Add .yarn/install-state.gz to .gitignore: #56637\r\n- chore(test): add logs for create-next-app tests: #56957\r\n- chore: revert back to moving files w/ `fs-extra`: #57030\r\n- Update CNA tests to avoid publish conflict: #57025\r\n- build(cargo): bump up turbopack: #57081\r\n- Update CNA tests more: #57088\r\n- Update runner for e2e deploy tests: #57089\r\n- update test manifest: #56938\r\n- make test case less flaky: #57138\r\n- Refine eslint rule: #57143\r\n- Update eslint config: #57146\r\n- Reduce e2e deploy concurrency: #57142\r\n- Mark most GTMParams as optional: #57153\r\n- chore: Add condition to skip update-fonts workflow on forks: #57165\r\n- Fix SCSS and SCSS loader handling tests for Turbopack: #57192\r\n- Skip webpack test in Turbopack test run: #57195\r\n- Skip output export production tests for Turbopack: #57197\r\n- Turbopack: reenable some skipped test cases: #57177\r\n- update test manifest: #57105\r\n- Update `swc_core` to `v0.86.10`: #57121\r\n- Import turbo daily integration test workflows: #57083\r\n- Skip i18n-ignore-rewrite-source irrelevant tests with turbopack: #57289\r\n- Increase concurrency for turbopack test run: #57290\r\n- Update unrelated mdx tests with turbopack: #57294\r\n- Skip i18n-ignore-rewrite-basepath-source irrelevant tests with turbopack: #57295\r\n- Update React from d803f519e to b8e47d988: #57296\r\n- Increase build-native CI job timeout: #57314\r\n- Revert \"Increase build-native CI job timeout (#57314)\": #57325\r\n- fix async-modules test: #57320\r\n- update turbopack test manifest: #57357\r\n- Split jsconfig-paths and jsconfig-paths-wildcard tests: #57360\r\n- disable opentelemetry test in turbopack: #57361\r\n- test(turbopack): update test manifest: #57366\r\n- test(next-image): adjust assertion compatible to turbopack: #57350\r\n- disable test temporarily: #57368\r\n- update manifest: #57421\r\n- enable e2e tests with turbopack: #57432\r\n- Turbopack: disable webpack specific test cases: #57423\r\n- Update React from b8e47d988 to a9985529f.: #57442\r\n- Update publish-native script for wasm change: #57472\r\n- update manifest: #57468\r\n- update manifest: #57468\r\n\r\n### Credits\r\n\r\nHuge thanks to @A7med3bdulBaset, @acdlite, @Andarist, @berlysia, @Bsodoge, @dijonmusters, @dpnolte, @feedthejim, @ForsakenHarmony, @gnoff, @housseindjirdeh, @huozhi, @ijjk, @janicklas-ralph, @jridgewell, @JuanM04, @kdy1, @kwonoj, @leung018, @nil1511, @padmaia, @philwolstenholme, @ryo-manba, @sebmarkbage, @shuding, @sokra, @styfle, @SukkaW, @timneutkens, @tomocchino, @wbinnssmith, @WhoAmIRUS, @wyattjoh, @xiaolou86, @Yovach, @ztanner and @balazsorban44 for helping!\r\n\r\n",
     "reactions": {
       "url": "https://api.github.com/repos/vercel/next.js/releases/126808565/reactions",
-      "total_count": 753,
+      "total_count": 754,
       "+1": 268,
       "-1": 0,
       "laugh": 49,
       "hooray": 143,
       "confused": 0,
       "heart": 102,
-      "rocket": 147,
+      "rocket": 148,
       "eyes": 44
     },
     "mentions_count": 37
