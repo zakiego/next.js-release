@@ -1,5 +1,48 @@
 [
   {
+    "url": "https://api.github.com/repos/vercel/next.js/releases/348823823",
+    "assets_url": "https://api.github.com/repos/vercel/next.js/releases/348823823/assets",
+    "upload_url": "https://uploads.github.com/repos/vercel/next.js/releases/348823823/assets{?name,label}",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.77",
+    "id": 348823823,
+    "author": {
+      "login": "next-js-bot[bot]",
+      "id": 279046576,
+      "node_id": "BOT_kgDOEKHpsA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/3491438?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/next-js-bot%5Bbot%5D",
+      "html_url": "https://github.com/apps/next-js-bot",
+      "followers_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOBC3Cis4UyqEP",
+    "tag_name": "v16.3.0-canary.77",
+    "target_commitish": "canary",
+    "name": "v16.3.0-canary.77",
+    "draft": false,
+    "immutable": false,
+    "prerelease": true,
+    "created_at": "2026-07-03T23:36:36Z",
+    "updated_at": "2026-07-04T00:00:12Z",
+    "published_at": "2026-07-04T00:00:12Z",
+    "assets": [],
+    "tarball_url": "https://api.github.com/repos/vercel/next.js/tarball/v16.3.0-canary.77",
+    "zipball_url": "https://api.github.com/repos/vercel/next.js/zipball/v16.3.0-canary.77",
+    "body": "### Misc Changes\n\n- Avoid unnecessary rendering for validation in dev: #95394\n- fix: work around SWC compress bug: #95457\n- docs: Update FormEvent to SubmitEvent in form handling example (deprecated in React 19.2.10+): #95453\n- Update font data: #95441\n- Ignore-list internal frames whose source maps chain to original sources: #95448\n- Type resolved `cacheLife` profiles, dropping runtime asserts: #95428\n- Split typeof-window server requires into .browser variants: #95201\n- Collect modules with browser variants statically: #95200\n\n### Credits \n\nHuge thanks to @lubieowoce, @M4cM4rco, @vercel-release-bot, @unstubbable, and @eps1lon for helping!",
+    "mentions_count": 5
+  },
+  {
     "url": "https://api.github.com/repos/vercel/next.js/releases/348338848",
     "assets_url": "https://api.github.com/repos/vercel/next.js/releases/348338848/assets",
     "upload_url": "https://uploads.github.com/repos/vercel/next.js/releases/348338848/assets{?name,label}",
@@ -42,14 +85,14 @@
     "body": "### Misc Changes\n\n- Fix navigation getting reverted when a Server Action is in flight: #95391\n- Fix false-positive nested-cache error for a short default profile: #95373\n- Skip saving `expire: 0` values in the default cache handler in prod: #95363\n- [ci] Disable mid-stack PR optimization for native PR stacks: #95427\n- Fix history push getting treated like replace when followed by refresh: #95392\n- Upgrade React from `ec0fca31-20260701` to `3508aee6-20260702`: #95410\n- fix(config): correctly validate cacheHandlers names: #95358\n- [ci] Actually migrate Turbopack jobs back to ARM: #95386\n- Recover from blocking routes under Instant Navigation lock when deployed: #95227\n- Make Instant Navigation Testing full-page loads work when deployed: #95222\n- Clear a resurrected instant cookie on unlock so a hard reload recovers: #95398\n- fix: handle prototype-colliding segment names in segment explorer trie: #95403\n- Prefetch links nearest the top of the document first: #95393\n- Fix metadata title dropped on soft navigation with Cache Components: #95315\n- Cache short-`expire` `'use cache'` values across dev reloads: #95362\n\n### Credits \n\nHuge thanks to @gaearon, @unstubbable, @bgw, @vercel-release-bot, @Partha-Shankar, @icyJoseph, and @acdlite for helping!",
     "reactions": {
       "url": "https://api.github.com/repos/vercel/next.js/releases/348338848/reactions",
-      "total_count": 1,
-      "+1": 0,
+      "total_count": 5,
+      "+1": 2,
       "-1": 0,
       "laugh": 0,
       "hooray": 1,
       "confused": 0,
       "heart": 0,
-      "rocket": 0,
+      "rocket": 2,
       "eyes": 0
     },
     "mentions_count": 7
@@ -152,15 +195,15 @@
     "body": "Contains no changes except publishing `@next/swc-wasm-web` which was accidentally not published since 16.2.4.",
     "reactions": {
       "url": "https://api.github.com/repos/vercel/next.js/releases/347694311/reactions",
-      "total_count": 9,
+      "total_count": 13,
       "+1": 0,
       "-1": 0,
-      "laugh": 3,
+      "laugh": 4,
       "hooray": 1,
       "confused": 0,
-      "heart": 0,
+      "heart": 1,
       "rocket": 0,
-      "eyes": 5
+      "eyes": 7
     }
   },
   {
