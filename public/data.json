@@ -1,5 +1,48 @@
 [
   {
+    "url": "https://api.github.com/repos/vercel/next.js/releases/355401393",
+    "assets_url": "https://api.github.com/repos/vercel/next.js/releases/355401393/assets",
+    "upload_url": "https://uploads.github.com/repos/vercel/next.js/releases/355401393/assets{?name,label}",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.88",
+    "id": 355401393,
+    "author": {
+      "login": "next-js-bot[bot]",
+      "id": 279046576,
+      "node_id": "BOT_kgDOEKHpsA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/3491438?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/next-js-bot%5Bbot%5D",
+      "html_url": "https://github.com/apps/next-js-bot",
+      "followers_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOBC3Cis4VLv6x",
+    "tag_name": "v16.3.0-canary.88",
+    "target_commitish": "canary",
+    "name": "v16.3.0-canary.88",
+    "draft": false,
+    "immutable": false,
+    "prerelease": true,
+    "created_at": "2026-07-16T23:32:58Z",
+    "updated_at": "2026-07-16T23:54:40Z",
+    "published_at": "2026-07-16T23:54:40Z",
+    "assets": [],
+    "tarball_url": "https://api.github.com/repos/vercel/next.js/tarball/v16.3.0-canary.88",
+    "zipball_url": "https://api.github.com/repos/vercel/next.js/zipball/v16.3.0-canary.88",
+    "body": "### Misc Changes\n\n- Run more test suites under cacheComponents flag: #95878\n- Unify appShells flag with Partial Prefetching: #95415\n- Fix Request Insights span collection: #95818\n- Revert \"Replay same-document traversals that happen before hydration\": #95853\n- [ci] Allow running all deploy tests with builds from a private registry: #95784\n- [turbopack] Only ship pages-router routes in the client chunk-group bootstrap manifest: #94671\n- [turbopack] Inline the chunk group bootstrap in Next.js to drop the per-route runtime: #94666\n- [turbopack] Add `chunk_group_bootstrap_params` and the chunk-loading global to the build manifest: #94663\n- [turbopack] Add `registerEntry()` to handle inline bootstrapping (#94664)\n- [turbopack] Add `inline_chunk_group_bootstrap` to `BrowserChunkingContext` and `chunk_group_bootstrap_params` to `ChunkGroupResult` (#94661)\n- [turbopack] Create a `chunk_group_bootstrap_params()` function (#94631)\n- [turbopack] Create a shared asset with browser runtime code (#94586)\n- Turbopack: trace externals imported only by server actions (#95824)\n\n### Credits \n\nHuge thanks to @gaearon, @acdlite, @timneutkens, @eps1lon, and @sampoder for helping!",
+    "mentions_count": 5
+  },
+  {
     "url": "https://api.github.com/repos/vercel/next.js/releases/354785829",
     "assets_url": "https://api.github.com/repos/vercel/next.js/releases/354785829/assets",
     "upload_url": "https://uploads.github.com/repos/vercel/next.js/releases/354785829/assets{?name,label}",
@@ -97,8 +140,8 @@
     "body": "### Misc Changes\n\n- Better support the CLI spinner when running the TSC CLI: #95753\n- Upgrade React from `5123b063-20260708` to `7023f501-20260714`: #95782\n- docs: add route-side URL data audit to the Partial Prefetching adoption guide: #95389\n- docs: revalidateTag with expire zero, for route handlers: #95760\n- request insights: add DevTools request panel (5/5): #93978\n- docs: Improve immutable static docs: #95752\n- Add React sync development skill: #95620\n- docs: useSearchParams example stray link: #95759\n- Improve the NFT error message and ignore comment handling: #95144\n- Upgrade to swc 73: #95731\n\n### Credits \n\nHuge thanks to @lukesandberg, @vercel-release-bot, @aurorascharff, @icyJoseph, @feedthejim, @mischnic, and @timneutkens for helping!",
     "reactions": {
       "url": "https://api.github.com/repos/vercel/next.js/releases/354127547/reactions",
-      "total_count": 3,
-      "+1": 1,
+      "total_count": 4,
+      "+1": 2,
       "-1": 0,
       "laugh": 0,
       "hooray": 2,
@@ -812,15 +855,15 @@
     "body": "Contains no changes except publishing `@next/swc-wasm-web` which was accidentally not published since 16.2.4.",
     "reactions": {
       "url": "https://api.github.com/repos/vercel/next.js/releases/347694311/reactions",
-      "total_count": 30,
+      "total_count": 32,
       "+1": 3,
       "-1": 0,
-      "laugh": 13,
+      "laugh": 14,
       "hooray": 2,
       "confused": 0,
       "heart": 3,
       "rocket": 0,
-      "eyes": 9
+      "eyes": 10
     }
   },
   {
@@ -2326,7 +2369,7 @@
     "body": "Empty release to ensure `next@latest` points at a stable release. Next.js only allows publishing with Trusted Publishing enabled. In order to fix NPM dist-tags, we have to release a new version. Updating dist-tags is not possible with Trusted Publishing.",
     "reactions": {
       "url": "https://api.github.com/repos/vercel/next.js/releases/337218050/reactions",
-      "total_count": 30,
+      "total_count": 31,
       "+1": 2,
       "-1": 0,
       "laugh": 20,
@@ -2334,7 +2377,7 @@
       "confused": 0,
       "heart": 0,
       "rocket": 0,
-      "eyes": 5
+      "eyes": 6
     }
   },
   {
