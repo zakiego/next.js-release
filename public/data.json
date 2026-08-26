@@ -1,5 +1,60 @@
 [
   {
+    "url": "https://api.github.com/repos/vercel/next.js/releases/376774104",
+    "assets_url": "https://api.github.com/repos/vercel/next.js/releases/376774104/assets",
+    "upload_url": "https://uploads.github.com/repos/vercel/next.js/releases/376774104/assets{?name,label}",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.8",
+    "id": 376774104,
+    "author": {
+      "login": "next-js-bot[bot]",
+      "id": 279046576,
+      "node_id": "BOT_kgDOEKHpsA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/3491438?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/next-js-bot%5Bbot%5D",
+      "html_url": "https://github.com/apps/next-js-bot",
+      "followers_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOBC3Cis4WdR3Y",
+    "tag_name": "v16.4.0-canary.8",
+    "target_commitish": "canary",
+    "name": "v16.4.0-canary.8",
+    "draft": false,
+    "immutable": false,
+    "prerelease": true,
+    "created_at": "2026-08-25T23:23:07Z",
+    "updated_at": "2026-08-25T23:46:22Z",
+    "published_at": "2026-08-25T23:46:22Z",
+    "assets": [],
+    "tarball_url": "https://api.github.com/repos/vercel/next.js/tarball/v16.4.0-canary.8",
+    "zipball_url": "https://api.github.com/repos/vercel/next.js/zipball/v16.4.0-canary.8",
+    "body": "### Misc Changes\n\n- Fix Turbopack resolution through chained symlinks: #97825\n- Add evals for whether agents actually use Next.js: #97816\n- evals: judge behavior instead of matching source text: #97826\n- Bump @vercel/agent-eval to 2.2.1: #97885\n- feat(turbopack): resolve `/`-rooted imports from the project directory: #97799\n- [ci] Use short-lived access tokens for preview-build uploads instead of static token: #97256\n- Turbopack: correctly trace through TypeScript `__importStar`: #97697\n- [turbopack] simplify ecmascript effect queue: #97771\n- Update default Create Next App favicon: #97634\n\n### Credits \n\nHuge thanks to @marcoshernanz, @gaojude, @sokra, @eps1lon, @mischnic, and @aurorascharff for helping!",
+    "reactions": {
+      "url": "https://api.github.com/repos/vercel/next.js/releases/376774104/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 1,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "mentions_count": 6
+  },
+  {
     "url": "https://api.github.com/repos/vercel/next.js/releases/376546268",
     "assets_url": "https://api.github.com/repos/vercel/next.js/releases/376546268/assets",
     "upload_url": "https://uploads.github.com/repos/vercel/next.js/releases/376546268/assets{?name,label}",
@@ -40,6 +95,18 @@
     "tarball_url": "https://api.github.com/repos/vercel/next.js/tarball/v16.4.0-canary.7",
     "zipball_url": "https://api.github.com/repos/vercel/next.js/zipball/v16.4.0-canary.7",
     "body": "### Misc Changes\n\n- Fix ISR misses with backslashes in segments when deployed on Windows: #97876\n- [next/image]: disable avif image optimization: #97875\n- fix(wasm): don't enable SWC's plugin host for wasm targets: #97859\n- fix(turbopack-node): make process_pool inert on wasm: #97858\n- fix(turbopack): make the SWC wasm-plugin backend native-only: #97857\n- fix(turbopack-trace-utils): skip the ctrl-c handler on wasm: #97856\n- refactor(turbopack-cli-utils): replace crossterm with owo-colors: #97855\n- fix(turbo-tasks-fs): create symlinks through the WASI API on wasi: #97854\n- fix(turbo-tasks): compile EventListener::wait on wasm: #97853\n- fix(turbo-rcstr): allow the napi feature on wasm targets: #97852\n- fix(next-napi-bindings): detect the target, not the host, in build.rs: #97576\n- Stop printing a stack frame for error message text: #97829\n- docs: clarify revalidateTag profile expire semantics: #97836\n- docs: param access on use-server: #97865\n- docs: fix typos and correctness issues in App Router docs: #97823\n- Add deploy release test skill: #97563\n- [test] Deflake the page config test for a string config value: #97848\n- test: stabilize read-only page recreation: #97674\n- Show the errors of an AggregateError behind a cause: #97830\n- Upgrade React from `eafeac09-20260819` to `bd6ea412-20260824`: #97812\n- fix: reuse a single drain listener when piping Node streams through gzip: #97698\n- test: preserve server cache after compile error: #97724\n\n### Credits \n\nHuge thanks to @eps1lon, @sokra, @unstubbable, @icyJoseph, @timneutkens, @hamidrezahanafi, and @wbinnssmith for helping!",
+    "reactions": {
+      "url": "https://api.github.com/repos/vercel/next.js/releases/376546268/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 1,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
     "mentions_count": 7
   },
   {
@@ -82,7 +149,19 @@
     "assets": [],
     "tarball_url": "https://api.github.com/repos/vercel/next.js/tarball/v16.3.3",
     "zipball_url": "https://api.github.com/repos/vercel/next.js/zipball/v16.3.3",
-    "body": "This release contains security fixes for the following advisories:\r\n\r\nCritical:\r\n\r\n- [Unauthenticated Remote Code Execution on windows-hosted servers](https://github.com/vercel/next.js/security/advisories/GHSA-p293-qw3h-jr36)\r\n- [Unauthenticated Remote Code Execution in Image Optimization API when AVIF files are used](https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4)\r\n"
+    "body": "This release contains security fixes for the following advisories:\r\n\r\nCritical:\r\n\r\n- [Unauthenticated Remote Code Execution on windows-hosted servers](https://github.com/vercel/next.js/security/advisories/GHSA-p293-qw3h-jr36)\r\n- [Unauthenticated Remote Code Execution in Image Optimization API when AVIF files are used](https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4)\r\n",
+    "reactions": {
+      "url": "https://api.github.com/repos/vercel/next.js/releases/376349169/reactions",
+      "total_count": 2,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 1,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    }
   },
   {
     "url": "https://api.github.com/repos/vercel/next.js/releases/376349518",
@@ -124,7 +203,19 @@
     "assets": [],
     "tarball_url": "https://api.github.com/repos/vercel/next.js/tarball/v15.5.24",
     "zipball_url": "https://api.github.com/repos/vercel/next.js/zipball/v15.5.24",
-    "body": "This release contains security fixes for the following advisories:\r\n\r\nCritical:\r\n\r\n- [Unauthenticated Remote Code Execution on windows-hosted servers](https://github.com/vercel/next.js/security/advisories/GHSA-p293-qw3h-jr36)\r\n- [Unauthenticated Remote Code Execution in Image Optimization API when AVIF files are used](https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4)\r\n"
+    "body": "This release contains security fixes for the following advisories:\r\n\r\nCritical:\r\n\r\n- [Unauthenticated Remote Code Execution on windows-hosted servers](https://github.com/vercel/next.js/security/advisories/GHSA-p293-qw3h-jr36)\r\n- [Unauthenticated Remote Code Execution in Image Optimization API when AVIF files are used](https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4)\r\n",
+    "reactions": {
+      "url": "https://api.github.com/repos/vercel/next.js/releases/376349518/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 1,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    }
   },
   {
     "url": "https://api.github.com/repos/vercel/next.js/releases/376046638",
