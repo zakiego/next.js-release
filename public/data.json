@@ -1,5 +1,60 @@
 [
   {
+    "url": "https://api.github.com/repos/vercel/next.js/releases/381629230",
+    "assets_url": "https://api.github.com/repos/vercel/next.js/releases/381629230/assets",
+    "upload_url": "https://uploads.github.com/repos/vercel/next.js/releases/381629230/assets{?name,label}",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.15",
+    "id": 381629230,
+    "author": {
+      "login": "next-js-bot[bot]",
+      "id": 279046576,
+      "node_id": "BOT_kgDOEKHpsA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/3491438?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/next-js-bot%5Bbot%5D",
+      "html_url": "https://github.com/apps/next-js-bot",
+      "followers_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/next-js-bot%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOBC3Cis4WvzMu",
+    "tag_name": "v16.4.0-canary.15",
+    "target_commitish": "canary",
+    "name": "v16.4.0-canary.15",
+    "draft": false,
+    "immutable": false,
+    "prerelease": true,
+    "created_at": "2026-09-02T23:21:09Z",
+    "updated_at": "2026-09-02T23:43:10Z",
+    "published_at": "2026-09-02T23:43:10Z",
+    "assets": [],
+    "tarball_url": "https://api.github.com/repos/vercel/next.js/tarball/v16.4.0-canary.15",
+    "zipball_url": "https://api.github.com/repos/vercel/next.js/zipball/v16.4.0-canary.15",
+    "body": "### Misc Changes\n\n- Reduce Turbopack cache size with per-family compression: #97714\n- [test] Skip hooks of suites skipped by a lazy `@force-gate`: #98169\n- docs: local development: Rewrite docker section, add Windows Dev Drive and WSL2 instructions: #98164\n- Bump swc to v77: #97407\n- Upgrade React from `ff7445e6-20260831` to `21c89c9f-20260901`: #98147\n- turbo-tasks-backend: parent_count-driven garbage collection: #97282\n- Remove the worker thread for turbopack builds: #96862\n- turbo-tasks-malloc: address review feedback on #97761: #98153\n\n### Credits \n\nHuge thanks to @lukesandberg, @eps1lon, @bgw, and @mischnic for helping!",
+    "reactions": {
+      "url": "https://api.github.com/repos/vercel/next.js/releases/381629230/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 1,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "mentions_count": 4
+  },
+  {
     "url": "https://api.github.com/repos/vercel/next.js/releases/380883824",
     "assets_url": "https://api.github.com/repos/vercel/next.js/releases/380883824/assets",
     "upload_url": "https://uploads.github.com/repos/vercel/next.js/releases/380883824/assets{?name,label}",
@@ -42,7 +97,7 @@
     "body": "### Misc Changes\n\n- turbo-tasks-malloc: report memory from mimalloc: #97761\n- Remove Edge runtime handling in use-cache-wrapper: #98139\n- Skip discussions in the `issue_lock` workflow: #98146\n- [ci] Fix `issue_lock`: #97755\n- docs: document preloading with Cache Components: #97864\n- chore: Remove expired sharp release age exclusions: #98120\n\n### Credits \n\nHuge thanks to @lukesandberg, @mischnic, @eps1lon, @aurorascharff, and @styfle for helping!",
     "reactions": {
       "url": "https://api.github.com/repos/vercel/next.js/releases/380883824/reactions",
-      "total_count": 1,
+      "total_count": 2,
       "+1": 0,
       "-1": 0,
       "laugh": 0,
@@ -50,7 +105,7 @@
       "confused": 0,
       "heart": 0,
       "rocket": 0,
-      "eyes": 0
+      "eyes": 1
     },
     "mentions_count": 5
   },
@@ -152,14 +207,14 @@
     "body": "Follow-up release to [v16.3.3](https://github.com/vercel/next.js/releases/tag/v16.3.3) re-enabling AVIF Image Optimization ([#97949](https://github.com/vercel/next.js/pull/97949)).\r\n\r\nThe following bug fixes have been backported. It does **not** include all pending features/changes on canary.\r\n\r\n- testmode: Fix infinite recursion in testmode passthrough fetch (#97691)\r\n- Fix build error when aliasing typescript to @typescript/typescript6 (#97997)\r\n- Fix unset crossOrigin in Turbopack manifests (#97930)\r\n\r\n### Credits\r\n\r\nHuge thanks to @eps1lon, @mischnic, and @timneutkens for helping!",
     "reactions": {
       "url": "https://api.github.com/repos/vercel/next.js/releases/379978331/reactions",
-      "total_count": 13,
+      "total_count": 15,
       "+1": 5,
       "-1": 0,
       "laugh": 0,
-      "hooray": 2,
+      "hooray": 3,
       "confused": 0,
       "heart": 4,
-      "rocket": 2,
+      "rocket": 3,
       "eyes": 0
     },
     "mentions_count": 3
