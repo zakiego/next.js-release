@@ -4,7 +4,7 @@ import { PanelRightOpenIcon, SearchIcon, SearchXIcon, XIcon } from "lucide-react
 import Link from "next/link";
 import { forwardRef, Fragment } from "react";
 import { ChannelBadge, NewestMark } from "@/components/release/channel-badge";
-import { prefetchNotes } from "@/components/release/notes-sheet";
+import { prefetchNotes } from "@/components/release/notes-store";
 import { RelativeTime } from "@/components/release/relative-time";
 import { Button } from "@/components/ui/button";
 import {

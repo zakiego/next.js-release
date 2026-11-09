@@ -7,13 +7,13 @@ import {
   parseAsStringLiteral,
   useQueryStates,
 } from "nuqs";
-import { useDeferredValue, useEffect, useMemo, useRef } from "react";
+import dynamic from "next/dynamic";
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import {
   BoardView,
   CHANNEL_FILTERS,
   type ChannelFilter,
 } from "@/app/(home)/board-view";
-import { NotesSheet } from "@/components/release/notes-sheet";
 import {
   groupByLine,
   matchesQuery,
@@ -22,6 +22,13 @@ import {
   type ReleaseSummary,
   unpackSummaries,
 } from "@/lib/release";
+
+// The sheet (Radix Dialog and its focus and scroll handling) loads the first
+// time notes open, or earlier when prefetchNotes runs on hover or focus.
+const NotesSheet = dynamic(
+  () => import("@/components/release/notes-sheet").then((m) => m.NotesSheet),
+  { ssr: false },
+);
 
 const boardParams = {
   q: parseAsString.withDefault(""),
@@ -51,6 +58,10 @@ export function ReleaseBoard({
     scroll: false,
   });
   const searchRef = useRef<HTMLInputElement>(null);
+
+  // Mount the sheet on first open and keep it, so closing still animates out.
+  const [sheetMounted, setSheetMounted] = useState(notes !== null);
+  if (notes !== null && !sheetMounted) setSheetMounted(true);
 
   const query = normalizeQuery(useDeferredValue(q));
 
@@ -126,11 +137,13 @@ export function ReleaseBoard({
         onOpenNotes={(tag) => setParams({ notes: tag }, { history: "push" })}
         onReset={() => setParams({ q: null, channel: null, show: null })}
       />
-      <NotesSheet
-        tag={notes}
-        release={notes ? releases.find((r) => r.tag === notes) : undefined}
-        onClose={() => setParams({ notes: null }, { history: "replace" })}
-      />
+      {sheetMounted && (
+        <NotesSheet
+          tag={notes}
+          release={notes ? releases.find((r) => r.tag === notes) : undefined}
+          onClose={() => setParams({ notes: null }, { history: "replace" })}
+        />
+      )}
     </>
   );
 }
