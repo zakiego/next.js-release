@@ -5,8 +5,10 @@ import { formatDate, formatRelative } from "@/lib/release";
 
 // The page is prerendered at deploy time, so "3 days ago" would go stale.
 // One shared clock ticks every minute and every label reads from it. The
-// server snapshot is null, so the label appears only after hydration.
+// static HTML shows ages as of the build, then hydration swaps in the
+// visitor's clock, so the column is never blank.
 const TICK_MS = 60_000;
+const BUILD_TIME = Number(process.env.BUILD_TIME) || 0;
 const listeners = new Set<() => void>();
 let now = 0;
 let timer: number | undefined;
@@ -34,7 +36,7 @@ function getSnapshot() {
 }
 
 function getServerSnapshot() {
-  return null;
+  return BUILD_TIME;
 }
 
 export function RelativeTime({
@@ -47,7 +49,7 @@ export function RelativeTime({
   const current = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
   return (
     <time dateTime={iso} title={formatDate(iso)} className={className}>
-      {current === null ? " " : formatRelative(iso, current)}
+      {current ? formatRelative(iso, current) : " "}
     </time>
   );
 }

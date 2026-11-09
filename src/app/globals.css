@@ -129,6 +129,12 @@
   input {
     caret-color: var(--foreground);
   }
+  /* No double-tap zoom wait on controls; taps fire immediately on touch. */
+  a,
+  button,
+  [role="button"] {
+    touch-action: manipulation;
+  }
   .tabular {
     font-variant-numeric: tabular-nums slashed-zero;
   }

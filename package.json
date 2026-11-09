@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "node scripts/split-data.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/split-data.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
@@ -17,7 +19,6 @@
   "dependencies": {
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "cn": "^0.5.2",
     "lucide-react": "^1.70.0",
     "next": "16.4.5",
     "next-themes": "^0.4.6",

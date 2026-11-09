@@ -2,8 +2,14 @@ name: Update Release Data
 
 on:
   schedule:
-    - cron: "0 * * * *" # every hour
+    - cron: "0 * * * *" # every hour: new releases only
+    - cron: "30 3 * * *" # daily: full refresh, picks up edited and deleted releases
   workflow_dispatch:
+    inputs:
+      full:
+        description: "Re-fetch every release, not just new ones"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -26,13 +32,13 @@ jobs:
       - name: Install bun
         uses: oven-sh/setup-bun@v2
         with:
-          bun-version: latest
+          bun-version: "1.4.2"
 
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
       - name: Fetch releases
-        run: bun run update-data
+        run: bun run update-data ${{ (github.event.schedule == '30 3 * * *' || inputs.full) && '--full' || '' }}
 
       - name: Check for changes
         id: changes

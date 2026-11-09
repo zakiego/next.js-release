@@ -118,9 +118,24 @@ export function formatDate(iso: string): string {
   return dateFormatter.format(new Date(iso));
 }
 
+const shortDateFormatter = new Intl.DateTimeFormat("en-US", {
+  year: "2-digit",
+  month: "short",
+  day: "numeric",
+  timeZone: "UTC",
+});
+
+/** "Oct 31 ’26", for the narrowest phones where the full date crowds the tag. */
+export function formatShortDate(iso: string): string {
+  const parts = Object.fromEntries(
+    shortDateFormatter.formatToParts(new Date(iso)).map((p) => [p.type, p.value]),
+  );
+  return `${parts.month} ${parts.day} \u2019${parts.year}`;
+}
+
 const relativeFormatter = new Intl.RelativeTimeFormat("en", {
   numeric: "auto",
-  style: "short",
+  style: "long",
 });
 
 const UNITS: [Intl.RelativeTimeFormatUnit, number][] = [
@@ -140,6 +155,46 @@ export function formatRelative(iso: string, now: number): string {
     }
   }
   return "just now";
+}
+
+// The board ships every release to the browser, so the list travels as one
+// packed string instead of ~4,000 JSON objects. Each record is
+// "<tag> <channel index> <published, unix seconds in base 36>", joined by "|".
+// Tags never contain spaces or pipes, and the line is derived from the tag.
+const RECORD_SEP = "|";
+const FIELD_SEP = " ";
+
+export function packSummaries(releases: ReleaseSummary[]): string {
+  return releases
+    .map((r) =>
+      [
+        r.tag,
+        CHANNELS.indexOf(r.channel),
+        Math.floor(Date.parse(r.publishedAt) / 1000).toString(36),
+      ].join(FIELD_SEP),
+    )
+    .join(RECORD_SEP);
+}
+
+export function unpackSummaries(packed: string): ReleaseSummary[] {
+  if (!packed) return [];
+  return packed.split(RECORD_SEP).map((record) => {
+    const [tag, channel, published] = record.split(FIELD_SEP);
+    return {
+      tag,
+      channel: CHANNELS[Number(channel)],
+      line: lineOf(tag),
+      // Same shape GitHub uses ("2026-11-07T23:22:41Z"), without milliseconds.
+      publishedAt: new Date(parseInt(published, 36) * 1000)
+        .toISOString()
+        .replace(".000Z", "Z"),
+    };
+  });
+}
+
+/** JSON for a <script type="application/ld+json"> tag, safe against "</script>". */
+export function jsonLdString(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
 }
 
 export function releaseHref(tag: string): string {
