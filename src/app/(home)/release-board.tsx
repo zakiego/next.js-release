@@ -20,6 +20,7 @@ import {
   normalizeQuery,
   PAGE_SIZE,
   type ReleaseSummary,
+  unpackSummaries,
 } from "@/lib/release";
 
 const boardParams = {
@@ -37,12 +38,14 @@ function inChannel(release: ReleaseSummary, channel: ChannelFilter) {
 }
 
 export function ReleaseBoard({
-  releases,
+  packed,
   newestTag,
 }: {
-  releases: ReleaseSummary[];
+  /** Every release, packed by `packSummaries` to keep the page payload small. */
+  packed: string;
   newestTag: string | undefined;
 }) {
+  const releases = useMemo(() => unpackSummaries(packed), [packed]);
   const [{ q, channel, show, notes }, setParams] = useQueryStates(boardParams, {
     history: "replace",
     scroll: false,

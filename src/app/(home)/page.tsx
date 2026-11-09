@@ -2,7 +2,14 @@ import { Suspense } from "react";
 import { BoardView, type ChannelFilter } from "@/app/(home)/board-view";
 import { LatestCard } from "@/app/(home)/latest-card";
 import { ReleaseBoard } from "@/app/(home)/release-board";
-import { groupByLine, PAGE_SIZE, SITE_NAME, SITE_URL } from "@/lib/release";
+import {
+  groupByLine,
+  jsonLdString,
+  packSummaries,
+  PAGE_SIZE,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/release";
 import {
   getLatest,
   getNewest,
@@ -53,7 +60,7 @@ export default function HomePage() {
     <main className="mx-auto flex w-full max-w-5xl flex-col gap-5 px-4 pt-4 sm:gap-8 sm:px-6 sm:pt-10">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }}
       />
       <div className="flex flex-col gap-2">
         <h1 className="max-w-2xl text-2xl font-semibold tracking-[-0.02em] text-balance sm:text-3xl">
@@ -83,7 +90,7 @@ export default function HomePage() {
       </div>
 
       <Suspense fallback={fallback}>
-        <ReleaseBoard releases={releases} newestTag={newestTag} />
+        <ReleaseBoard packed={packSummaries(releases)} newestTag={newestTag} />
       </Suspense>
     </main>
   );
