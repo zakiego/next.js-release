@@ -1,80 +1,186 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@custom-variant dark (&:is(.dark *));
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+/*
+ * Release board palette. Neutral panels, one alert hue ("signal") that only
+ * marks the newest release. Stable and canary are told apart by labels.
+ */
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.985 0.002 90);
+  --foreground: oklch(0.2 0.006 90);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.006 90);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.006 90);
+  --primary: oklch(0.22 0.006 90);
+  --primary-foreground: oklch(0.985 0.002 90);
+  --secondary: oklch(0.955 0.003 90);
+  --secondary-foreground: oklch(0.22 0.006 90);
+  --muted: oklch(0.955 0.003 90);
+  --muted-foreground: oklch(0.47 0.008 90);
+  --accent: oklch(0.945 0.004 90);
+  --accent-foreground: oklch(0.22 0.006 90);
+  --destructive: oklch(0.55 0.21 27);
+  --border: oklch(0.905 0.004 90);
+  --input: oklch(0.88 0.004 90);
+  --ring: oklch(0.6 0.01 90);
+  --signal: oklch(0.6 0.17 47);
+  --signal-foreground: oklch(0.99 0.01 80);
+  --signal-soft: oklch(0.96 0.04 70);
+  --signal-ink: oklch(0.48 0.15 45);
+}
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+.dark {
+  --background: oklch(0.155 0.004 90);
+  --foreground: oklch(0.95 0.004 90);
+  --card: oklch(0.195 0.004 90);
+  --card-foreground: oklch(0.95 0.004 90);
+  --popover: oklch(0.205 0.004 90);
+  --popover-foreground: oklch(0.95 0.004 90);
+  --primary: oklch(0.95 0.004 90);
+  --primary-foreground: oklch(0.18 0.004 90);
+  --secondary: oklch(0.25 0.004 90);
+  --secondary-foreground: oklch(0.95 0.004 90);
+  --muted: oklch(0.24 0.004 90);
+  --muted-foreground: oklch(0.7 0.006 90);
+  --accent: oklch(0.27 0.004 90);
+  --accent-foreground: oklch(0.95 0.004 90);
+  --destructive: oklch(0.68 0.19 25);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.55 0.01 90);
+  --signal: oklch(0.74 0.16 55);
+  --signal-foreground: oklch(0.2 0.03 50);
+  --signal-soft: oklch(0.3 0.06 50);
+  --signal-ink: oklch(0.8 0.13 60);
+}
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+@theme {
+  /* Motion tokens. These replace Tailwind's built-in ease-out, which is too weak for UI. */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+}
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-  }
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-signal: var(--signal);
+  --color-signal-foreground: var(--signal-foreground);
+  --color-signal-soft: var(--signal-soft);
+  --color-signal-ink: var(--signal-ink);
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border outline-ring;
+  }
+  :root {
+    /* Height of the sticky search bar; minor-version bands stick below it. */
+    --board-band-top: 6.5rem;
+  }
+  @media (width >= 40rem) {
+    :root {
+      --board-band-top: 3.75rem;
+    }
+  }
+  html {
+    /* Keep keyboard focus clear of the sticky search bar and band. */
+    scroll-padding-top: calc(var(--board-band-top) + 2.75rem);
+    color-scheme: light;
+    -webkit-tap-highlight-color: transparent;
+  }
+  html.dark {
+    color-scheme: dark;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01";
   }
+  ::selection {
+    background: color-mix(in oklch, var(--foreground) 14%, transparent);
+  }
+  input {
+    caret-color: var(--foreground);
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums slashed-zero;
+  }
+}
+
+/*
+ * Release notes: map the typography plugin's colors onto the theme tokens.
+ * Unlayered on purpose, so it wins over the plugin's utilities layer.
+ */
+.release-notes.prose {
+  --tw-prose-body: var(--foreground);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-links: var(--foreground);
+  --tw-prose-bold: var(--foreground);
+  --tw-prose-counters: var(--muted-foreground);
+  --tw-prose-bullets: var(--muted-foreground);
+  --tw-prose-hr: var(--border);
+  --tw-prose-quotes: var(--foreground);
+  --tw-prose-quote-borders: var(--border);
+  --tw-prose-code: var(--foreground);
+  --tw-prose-pre-code: var(--foreground);
+  --tw-prose-pre-bg: var(--muted);
+  --tw-prose-th-borders: var(--border);
+  --tw-prose-td-borders: var(--border);
+  overflow-wrap: anywhere;
+}
+.release-notes :where(h1, h2, h3, h4) {
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.release-notes :where(h3):not(:first-child) {
+  margin-top: 2em;
+}
+.release-notes :where(a) {
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in oklch, currentColor 35%, transparent);
+}
+.release-notes :where(code):not(:where(pre *)) {
+  border-radius: var(--radius-sm);
+  background: var(--muted);
+  padding: 0.1em 0.35em;
+  font-weight: 500;
+}
+.release-notes :where(code):not(:where(pre *))::before,
+.release-notes :where(code):not(:where(pre *))::after {
+  content: none;
+}
+.release-notes :where(pre) {
+  overflow-x: auto;
+  overflow-wrap: normal;
+}
+.release-notes :where(img) {
+  max-width: 100%;
+  height: auto;
 }

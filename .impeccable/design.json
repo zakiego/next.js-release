@@ -1,0 +1,448 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T12:30:00+07:00",
+  "title": "Design System: Next.js Releases",
+  "extensions": {
+    "colorMeta": {
+      "signal": {
+        "role": "primary",
+        "displayName": "Signal Orange",
+        "canonical": "oklch(0.6 0.17 47)",
+        "dark": "oklch(0.74 0.16 55)",
+        "ogHex": "#ce5700",
+        "tonalRamp": [
+          "oklch(0.2 0.06 47)",
+          "oklch(0.3 0.1 47)",
+          "oklch(0.4 0.13 47)",
+          "oklch(0.5 0.16 47)",
+          "oklch(0.6 0.17 47)",
+          "oklch(0.72 0.14 50)",
+          "oklch(0.84 0.09 60)",
+          "oklch(0.95 0.04 70)"
+        ]
+      },
+      "signal-soft": {
+        "role": "primary",
+        "displayName": "Signal Wash",
+        "canonical": "oklch(0.96 0.04 70)",
+        "dark": "oklch(0.3 0.06 50)",
+        "ogHex": "#ffeed6",
+        "tonalRamp": [
+          "oklch(0.2 0.03 70)",
+          "oklch(0.3 0.05 70)",
+          "oklch(0.42 0.06 70)",
+          "oklch(0.55 0.07 70)",
+          "oklch(0.68 0.07 70)",
+          "oklch(0.8 0.06 70)",
+          "oklch(0.9 0.05 70)",
+          "oklch(0.96 0.04 70)"
+        ]
+      },
+      "signal-ink": {
+        "role": "primary",
+        "displayName": "Signal Ink",
+        "canonical": "oklch(0.48 0.15 45)",
+        "dark": "oklch(0.8 0.13 60)",
+        "ogHex": "#9e3800",
+        "tonalRamp": [
+          "oklch(0.18 0.05 45)",
+          "oklch(0.28 0.09 45)",
+          "oklch(0.38 0.12 45)",
+          "oklch(0.48 0.15 45)",
+          "oklch(0.6 0.15 45)",
+          "oklch(0.72 0.12 50)",
+          "oklch(0.84 0.08 55)",
+          "oklch(0.95 0.03 60)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "oklch(0.985 0.002 90)",
+        "dark": "oklch(0.155 0.004 90)",
+        "ogHex": "#fafaf9",
+        "tonalRamp": [
+          "oklch(0.155 0.004 90)",
+          "oklch(0.25 0.004 90)",
+          "oklch(0.37 0.004 90)",
+          "oklch(0.5 0.004 90)",
+          "oklch(0.63 0.003 90)",
+          "oklch(0.76 0.003 90)",
+          "oklch(0.88 0.002 90)",
+          "oklch(0.985 0.002 90)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel White",
+        "canonical": "oklch(1 0 0)",
+        "dark": "oklch(0.195 0.004 90)",
+        "ogHex": "#ffffff",
+        "tonalRamp": [
+          "oklch(0.195 0.004 90)",
+          "oklch(0.3 0.004 90)",
+          "oklch(0.42 0.003 90)",
+          "oklch(0.54 0.003 90)",
+          "oklch(0.66 0.002 90)",
+          "oklch(0.78 0.002 90)",
+          "oklch(0.9 0.001 90)",
+          "oklch(1 0 0)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Board Ink",
+        "canonical": "oklch(0.2 0.006 90)",
+        "dark": "oklch(0.95 0.004 90)",
+        "ogHex": "#171613",
+        "tonalRamp": [
+          "oklch(0.15 0.006 90)",
+          "oklch(0.2 0.006 90)",
+          "oklch(0.32 0.006 90)",
+          "oklch(0.45 0.006 90)",
+          "oklch(0.58 0.005 90)",
+          "oklch(0.71 0.004 90)",
+          "oklch(0.84 0.003 90)",
+          "oklch(0.95 0.002 90)"
+        ]
+      },
+      "ink-strong": {
+        "role": "neutral",
+        "displayName": "Ink Strong",
+        "canonical": "oklch(0.22 0.006 90)",
+        "dark": "oklch(0.95 0.004 90)",
+        "tonalRamp": [
+          "oklch(0.15 0.006 90)",
+          "oklch(0.22 0.006 90)",
+          "oklch(0.34 0.006 90)",
+          "oklch(0.47 0.006 90)",
+          "oklch(0.6 0.005 90)",
+          "oklch(0.73 0.004 90)",
+          "oklch(0.85 0.003 90)",
+          "oklch(0.95 0.002 90)"
+        ]
+      },
+      "wash": {
+        "role": "neutral",
+        "displayName": "Wash",
+        "canonical": "oklch(0.955 0.003 90)",
+        "dark": "oklch(0.24 0.004 90)",
+        "ogHex": "#f1f0ee",
+        "tonalRamp": [
+          "oklch(0.18 0.004 90)",
+          "oklch(0.3 0.004 90)",
+          "oklch(0.42 0.004 90)",
+          "oklch(0.55 0.004 90)",
+          "oklch(0.68 0.003 90)",
+          "oklch(0.8 0.003 90)",
+          "oklch(0.9 0.003 90)",
+          "oklch(0.955 0.003 90)"
+        ]
+      },
+      "wash-hover": {
+        "role": "neutral",
+        "displayName": "Wash Hover",
+        "canonical": "oklch(0.945 0.004 90)",
+        "dark": "oklch(0.27 0.004 90)",
+        "tonalRamp": [
+          "oklch(0.18 0.004 90)",
+          "oklch(0.3 0.004 90)",
+          "oklch(0.42 0.004 90)",
+          "oklch(0.55 0.004 90)",
+          "oklch(0.68 0.004 90)",
+          "oklch(0.8 0.004 90)",
+          "oklch(0.9 0.004 90)",
+          "oklch(0.945 0.004 90)"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "oklch(0.47 0.008 90)",
+        "dark": "oklch(0.7 0.006 90)",
+        "ogHex": "#5c5b56",
+        "tonalRamp": [
+          "oklch(0.17 0.008 90)",
+          "oklch(0.27 0.008 90)",
+          "oklch(0.37 0.008 90)",
+          "oklch(0.47 0.008 90)",
+          "oklch(0.6 0.007 90)",
+          "oklch(0.72 0.006 90)",
+          "oklch(0.84 0.004 90)",
+          "oklch(0.95 0.002 90)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(0.905 0.004 90)",
+        "dark": "oklch(1 0 0 / 10%)",
+        "ogHex": "#e0dfdd",
+        "tonalRamp": [
+          "oklch(0.18 0.004 90)",
+          "oklch(0.3 0.004 90)",
+          "oklch(0.42 0.004 90)",
+          "oklch(0.55 0.004 90)",
+          "oklch(0.68 0.004 90)",
+          "oklch(0.8 0.004 90)",
+          "oklch(0.905 0.004 90)",
+          "oklch(0.97 0.002 90)"
+        ]
+      },
+      "field-stroke": {
+        "role": "neutral",
+        "displayName": "Field Stroke",
+        "canonical": "oklch(0.88 0.004 90)",
+        "dark": "oklch(1 0 0 / 14%)",
+        "tonalRamp": [
+          "oklch(0.18 0.004 90)",
+          "oklch(0.3 0.004 90)",
+          "oklch(0.42 0.004 90)",
+          "oklch(0.55 0.004 90)",
+          "oklch(0.68 0.004 90)",
+          "oklch(0.78 0.004 90)",
+          "oklch(0.88 0.004 90)",
+          "oklch(0.96 0.002 90)"
+        ]
+      },
+      "focus-ring": {
+        "role": "neutral",
+        "displayName": "Focus Grey",
+        "canonical": "oklch(0.6 0.01 90)",
+        "dark": "oklch(0.55 0.01 90)",
+        "tonalRamp": [
+          "oklch(0.18 0.01 90)",
+          "oklch(0.3 0.01 90)",
+          "oklch(0.42 0.01 90)",
+          "oklch(0.52 0.01 90)",
+          "oklch(0.6 0.01 90)",
+          "oklch(0.72 0.008 90)",
+          "oklch(0.84 0.005 90)",
+          "oklch(0.95 0.002 90)"
+        ]
+      },
+      "fault": {
+        "role": "error",
+        "displayName": "Fault Red",
+        "canonical": "oklch(0.55 0.21 27)",
+        "dark": "oklch(0.68 0.19 25)",
+        "tonalRamp": [
+          "oklch(0.2 0.07 27)",
+          "oklch(0.3 0.12 27)",
+          "oklch(0.42 0.17 27)",
+          "oklch(0.55 0.21 27)",
+          "oklch(0.65 0.18 27)",
+          "oklch(0.75 0.13 27)",
+          "oklch(0.86 0.07 27)",
+          "oklch(0.95 0.03 27)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Version",
+        "purpose": "The version on a boarding-pass card, fitted to the card width by container query. Release page h1 uses the same face at clamp(2rem, 7vw, 3.25rem), line-height 1.05."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The home page h1 only. 1.5rem on mobile, 1.875rem from 640px. Sans, balanced."
+      },
+      "title": {
+        "displayName": "Sheet Title",
+        "purpose": "The version at the top of the notes sheet."
+      },
+      "band": {
+        "displayName": "Band",
+        "purpose": "Minor-version line name in a sticky board band."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Version links in rows and card field values. Row dates and ages use 13px at 400 in graphite."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Intro copy, footer, empty states, release notes prose. 0.875rem to 1rem; notes capped at 70ch."
+      },
+      "label": {
+        "displayName": "Field Label",
+        "purpose": "Uppercase 11px mono label that names a data value: boarding-pass dt, column headers, band counts."
+      }
+    },
+    "shadows": [
+      {
+        "name": "panel",
+        "value": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        "purpose": "Boarding-pass cards (shadcn shadow-sm)."
+      },
+      {
+        "name": "control",
+        "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "purpose": "Outline buttons, search input group, channel toggle group (shadow-xs)."
+      },
+      {
+        "name": "overlay",
+        "value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "purpose": "Notes sheet and dropdown menu (shadow-lg). The sheet also sits on a 50% black scrim."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Control feedback (150ms color transitions, 0.97 press scale) and the 200ms notes fade-in. Overrides Tailwind's built-in ease-out."
+      },
+      {
+        "name": "ease-drawer",
+        "value": "cubic-bezier(0.32, 0.72, 0, 1)",
+        "purpose": "Notes sheet and scrim: 300ms in, 200ms out. Reduced motion falls back to a fade."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.77, 0, 0.175, 1)",
+        "purpose": "Declared for on-screen movement. No shipped component uses it yet."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      }
+    ],
+    "layout": {
+      "homeMaxWidth": "64rem",
+      "releaseMaxWidth": "48rem",
+      "gutter": "16px mobile, 24px from 640px",
+      "boardBandTop": "6.5rem mobile, 3.75rem from 640px (--board-band-top)",
+      "rowCellPaddingY": "6px"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink-filled action, used sparingly: Open release page, Browse all releases.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Open release page <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 8px 16px; border-radius: calc(var(--radius) - 2px); font-family: var(--font-sans); font-size: 14px; font-weight: 500; white-space: nowrap; border: 1px solid transparent; cursor: pointer; outline: none; transition: color 150ms cubic-bezier(0.23, 1, 0.32, 1), background-color 150ms cubic-bezier(0.23, 1, 0.32, 1), border-color 150ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 150ms cubic-bezier(0.23, 1, 0.32, 1), scale 150ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn:focus-visible { border-color: var(--ring); box-shadow: 0 0 0 3px var(--ring); } .ds-btn:active { scale: 0.97; } .ds-btn-primary { background: var(--primary); color: var(--primary-foreground); } .ds-btn-primary:hover { background: color-mix(in oklch, var(--primary) 90%, transparent); }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "The workhorse secondary action: Show more, View on GitHub, Older/Newer.",
+      "html": "<button class=\"ds-btn-outline\">Show 50 more</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 8px 16px; border-radius: calc(var(--radius) - 2px); border: 1px solid var(--border); background: var(--background); color: var(--foreground); font-family: var(--font-sans); font-size: 14px; font-weight: 500; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); cursor: pointer; outline: none; transition: background-color 150ms cubic-bezier(0.23, 1, 0.32, 1), scale 150ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-outline:hover { background: var(--accent); color: var(--accent-foreground); } .ds-btn-outline:focus-visible { border-color: var(--ring); box-shadow: 0 0 0 3px var(--ring); } .ds-btn-outline:active { scale: 0.97; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Row Notes button and card footer action. Icon inline-start.",
+      "html": "<button class=\"ds-btn-ghost\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\"/><path d=\"M15 3v18\"/><path d=\"m10 15-3-3 3-3\"/></svg>Notes</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 10px; border-radius: calc(var(--radius) - 2px); border: none; background: transparent; color: var(--foreground); font-family: var(--font-sans); font-size: 14px; font-weight: 500; cursor: pointer; outline: none; transition: background-color 150ms cubic-bezier(0.23, 1, 0.32, 1), scale 150ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-ghost:hover { background: var(--accent); } .ds-btn-ghost:focus-visible { box-shadow: 0 0 0 3px var(--ring); } .ds-btn-ghost:active { scale: 0.97; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Mono search input group with a slash Kbd hint, sticky above the board.",
+      "html": "<label class=\"ds-search\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><input type=\"search\" placeholder=\"Search, e.g. 15.3\" aria-label=\"Search versions\" /><kbd>/</kbd></label>",
+      "css": ".ds-search { display: flex; align-items: center; gap: 8px; width: 320px; height: 36px; padding: 0 8px 0 12px; border: 1px solid var(--input); border-radius: calc(var(--radius) - 2px); box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); color: var(--muted-foreground); transition: box-shadow 150ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-search:focus-within { border-color: var(--ring); box-shadow: 0 0 0 3px var(--ring); } .ds-search input { flex: 1; min-width: 0; border: 0; background: transparent; outline: none; color: var(--foreground); font-family: var(--font-mono); font-size: 14px; caret-color: var(--foreground); } .ds-search input::placeholder { color: var(--muted-foreground); } .ds-search kbd { display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px; padding: 0 4px; border-radius: calc(var(--radius) - 4px); background: var(--muted); color: var(--muted-foreground); font-family: var(--font-sans); font-size: 12px; font-weight: 500; }"
+    },
+    {
+      "name": "Channel Toggle",
+      "kind": "nav",
+      "refersTo": "toggle-channel",
+      "description": "Joined outline toggle group with mono counts. Selected item fills with wash-hover.",
+      "html": "<div class=\"ds-toggle\" role=\"group\" aria-label=\"Filter by channel\"><button aria-pressed=\"true\">All <span>3,938</span></button><button aria-pressed=\"false\">Stable <span>382</span></button><button aria-pressed=\"false\">Pre-release <span>3,556</span></button></div>",
+      "css": ".ds-toggle { display: inline-flex; border-radius: calc(var(--radius) - 2px); box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); } .ds-toggle button { display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 12px; border: 1px solid var(--input); border-left-width: 0; background: transparent; color: var(--foreground); font-family: var(--font-sans); font-size: 14px; font-weight: 500; cursor: pointer; outline: none; transition: color 150ms, box-shadow 150ms; } .ds-toggle button:first-child { border-left-width: 1px; border-radius: calc(var(--radius) - 2px) 0 0 calc(var(--radius) - 2px); } .ds-toggle button:last-child { border-radius: 0 calc(var(--radius) - 2px) calc(var(--radius) - 2px) 0; } .ds-toggle button span { font-family: var(--font-mono); font-size: 12px; color: var(--muted-foreground); font-variant-numeric: tabular-nums slashed-zero; } .ds-toggle button:hover { background: var(--accent); } .ds-toggle button[aria-pressed=\"true\"] { background: var(--accent); color: var(--accent-foreground); } .ds-toggle button:focus-visible { position: relative; z-index: 1; border-color: var(--ring); box-shadow: 0 0 0 3px var(--ring); }"
+    },
+    {
+      "name": "Channel and Newest Badges",
+      "kind": "chip",
+      "refersTo": "badge-stable",
+      "description": "Filled Stable, outlined Canary, and the one signal-colored Newest mark.",
+      "html": "<span class=\"ds-badge ds-badge-stable\">Stable</span> <span class=\"ds-badge ds-badge-canary\">Canary</span> <span class=\"ds-badge ds-badge-newest\"><i></i>Newest</span>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border: 1px solid transparent; border-radius: 9999px; font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: -0.025em; white-space: nowrap; } .ds-badge-stable { background: var(--primary); color: var(--primary-foreground); } .ds-badge-canary { border-color: var(--border); color: var(--foreground); } .ds-badge-newest { background: var(--signal-soft); color: var(--signal-ink); } .ds-badge-newest i { width: 6px; height: 6px; border-radius: 9999px; background: var(--signal); }"
+    },
+    {
+      "name": "Boarding-Pass Card",
+      "kind": "card",
+      "refersTo": "card-boarding-pass",
+      "description": "Latest stable or canary: fitted display version, dashed perforation, labeled segments, wash footer.",
+      "html": "<article class=\"ds-pass\"><a class=\"ds-pass-version\" href=\"#\">v16.4.5</a><div class=\"ds-pass-perf\"></div><dl class=\"ds-pass-fields\"><div><dt>Latest stable</dt><dd><span class=\"ds-pass-badge\">Stable</span></dd></div><div><dt>Published</dt><dd>Nov 3, 2026</dd></div><div><dt>Age</dt><dd>5 days ago</dd></div></dl><footer class=\"ds-pass-foot\"><button>Read the notes</button></footer></article>",
+      "css": ".ds-pass { container-type: inline-size; display: flex; flex-direction: column; width: 460px; overflow: hidden; background: var(--card); color: var(--card-foreground); border: 1px solid var(--border); border-radius: calc(var(--radius) + 4px); box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); } .ds-pass-version { display: block; padding: 20px 20px 16px; font-family: var(--font-mono); font-size: clamp(1.25rem, calc(100cqi / 7 / 0.66), 3.5rem); font-weight: 600; line-height: 1; letter-spacing: -0.03em; white-space: nowrap; color: inherit; text-decoration: none; border-radius: calc(var(--radius) - 4px); outline: none; } .ds-pass-version:focus-visible { box-shadow: inset 0 0 0 3px var(--ring); } .ds-pass-perf { margin: 0 20px; border-top: 1px dashed var(--border); } .ds-pass-fields { display: flex; flex-wrap: wrap; gap: 12px 32px; margin: 0; padding: 16px 20px; font-size: 14px; } .ds-pass-fields > div { display: flex; flex-direction: column; gap: 6px; } .ds-pass-fields dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.025em; text-transform: uppercase; color: var(--muted-foreground); } .ds-pass-fields dd { margin: 0; font-family: var(--font-mono); font-weight: 500; font-variant-numeric: tabular-nums slashed-zero; white-space: nowrap; } .ds-pass-badge { display: inline-flex; padding: 2px 8px; border-radius: 9999px; background: var(--primary); color: var(--primary-foreground); font-size: 12px; } .ds-pass-foot { padding: 8px 20px; border-top: 1px solid var(--border); background: color-mix(in oklch, var(--muted) 40%, transparent); } .ds-pass-foot button { margin-left: -12px; height: 32px; padding: 0 10px; border: 0; border-radius: calc(var(--radius) - 2px); background: transparent; color: var(--foreground); font-family: var(--font-sans); font-size: 14px; font-weight: 500; cursor: pointer; } .ds-pass-foot button:hover { background: var(--accent); }"
+    },
+    {
+      "name": "Departures Board",
+      "kind": "custom",
+      "description": "Dense release table with a sticky minor-version band and mono data columns.",
+      "html": "<table class=\"ds-board\"><thead><tr><th>Version</th><th>Channel</th><th>Published</th><th>Age</th></tr></thead><tbody><tr class=\"ds-band\"><th colspan=\"4\"><span><b>v16.5</b><small>44 releases</small></span></th></tr><tr><td><a href=\"#\">v16.5.0-canary.44</a> <span class=\"ds-newest\"><i></i>Newest</span></td><td><span class=\"ds-chan\">Canary</span></td><td class=\"ds-dim\">Nov 7, 2026</td><td class=\"ds-dim\">yesterday</td></tr><tr><td><a href=\"#\">v16.5.0-canary.43</a></td><td><span class=\"ds-chan\">Canary</span></td><td class=\"ds-dim\">Nov 6, 2026</td><td class=\"ds-dim\">2 days ago</td></tr></tbody></table>",
+      "css": ".ds-board { width: 640px; border-collapse: collapse; font-size: 14px; color: var(--foreground); } .ds-board thead th { height: 40px; padding: 0 8px; text-align: left; border-bottom: 1px solid var(--border); font-family: var(--font-mono); font-size: 11px; font-weight: 400; letter-spacing: 0.025em; text-transform: uppercase; color: var(--muted-foreground); } .ds-board thead th:first-child { padding-left: 0; width: 100%; } .ds-band th { position: sticky; top: 0; height: 36px; padding: 0; background: var(--background); text-align: left; } .ds-band span { display: flex; align-items: baseline; gap: 8px; padding: 8px 0 6px; border-bottom: 1px solid var(--border); } .ds-band b { font-family: var(--font-mono); font-size: 14px; font-weight: 600; letter-spacing: -0.025em; } .ds-band small { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.025em; text-transform: uppercase; color: var(--muted-foreground); font-variant-numeric: tabular-nums slashed-zero; } .ds-board tbody tr:not(.ds-band) { border-bottom: 1px solid var(--border); transition: background-color 150ms; } .ds-board tbody tr:not(.ds-band):hover { background: color-mix(in oklch, var(--muted) 50%, transparent); } .ds-board td { padding: 6px 8px; white-space: nowrap; } .ds-board td:first-child { padding-left: 0; } .ds-board td a { font-family: var(--font-mono); font-weight: 500; letter-spacing: -0.025em; color: inherit; text-decoration: none; text-underline-offset: 4px; border-radius: calc(var(--radius) - 4px); } .ds-board td a:hover { text-decoration: underline; } .ds-board td a:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; } .ds-dim { font-family: var(--font-mono); font-size: 13px; color: var(--muted-foreground); font-variant-numeric: tabular-nums slashed-zero; } .ds-chan { display: inline-flex; padding: 2px 8px; border: 1px solid var(--border); border-radius: 9999px; font-family: var(--font-mono); font-size: 12px; font-weight: 500; } .ds-newest { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 9999px; background: var(--signal-soft); color: var(--signal-ink); font-family: var(--font-mono); font-size: 12px; font-weight: 500; } .ds-newest i { width: 6px; height: 6px; border-radius: 9999px; background: var(--signal); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Departures Board",
+    "overview": "Releases read like a gate board at an airport: a ranked, dense list of rows ordered by time, with every version and date set in tabular mono figures. The board sits on warm, near-neutral paper (hue 90, chroma under 0.01) with white panels and hairline rules. Nothing is decorated. Hierarchy comes from scale contrast alone: giant mono version numbers against small uppercase mono field labels.\n\nTwo boarding-pass cards lead the page, one for the latest stable and one for the latest canary. Each has the version fitted to the card width, a dashed perforation rule, and labeled segments (channel, published, age). Below them, a sticky search bar and channel toggle sit over a table that is split into sticky minor-version bands with release counts. Notes open in a right-hand sheet so the visitor never leaves the board. Each release also has its own page at `/releases/<tag>` that reuses the same display version, badges, and prose treatment in a narrower column.\n\nThere is exactly one hue in the system. Signal orange marks the newest published release and nothing else. Stable and canary are told apart by a filled versus outlined label, never by color. The site is unofficial, so it carries no Vercel or Next.js marks; the wordmark is just \"Next.js Releases\" set in Geist Mono.",
+    "keyCharacteristics": [
+      "Warm off-white paper with white panels, both light and dark themes",
+      "Geist Mono for every version, date, count, and field label; Geist Sans for prose and controls",
+      "One alert hue (signal), used only on the Newest mark",
+      "Labeled segments and dashed perforation rules borrowed from boarding passes",
+      "Dense rows (6px vertical cell padding) with sticky minor-version bands",
+      "Flat surfaces, hairline borders, shadcn new-york primitives"
+    ],
+    "rules": [
+      {
+        "name": "The One Signal Rule",
+        "body": "The signal hue appears in exactly one component: the Newest mark on the single most recently published release. It never marks a channel, a link, a hover, a button, or a heading. If a second thing needs attention, it gets weight or scale, not signal.",
+        "section": "colors"
+      },
+      {
+        "name": "The Label Not Color Rule",
+        "body": "Stable is a filled ink badge, canary (and other pre-releases) an outlined badge. Both carry the channel name in text. Never encode channel by hue.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono For Machines Rule",
+        "body": "Anything a machine produced (a tag, a date, a count, a relative age) is Geist Mono with `tabular-nums slashed-zero`. Anything a person reads as a sentence is Geist Sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The Scale Contrast Rule",
+        "body": "Hierarchy comes from size jumps between display versions and 11px labels, not from color or extra weights. Only 400, 500, and 600 are used.",
+        "section": "typography"
+      },
+      {
+        "name": "The Labeled Segment Rule",
+        "body": "The 11px uppercase mono label only ever names a data value directly beneath or beside it (a `<dt>`, a column header, a count). It is never a floating eyebrow above a heading.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline Rule",
+        "body": "Separation is a 1px hairline border or a tonal step. Sticky surfaces (search strip, bands) get a solid paper background so rows slide under them cleanly, never a blur or a shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do set every version, date, count, and relative age in Geist Mono with `tabular-nums slashed-zero`.",
+      "Do keep the signal hue on the Newest mark only, and keep that mark on one release at a time.",
+      "Do tell channels apart with the filled Stable badge versus the outlined canary badge, always with the channel name in text.",
+      "Do label data segments with 11px uppercase mono labels in graphite, placed directly on the value they name.",
+      "Do separate surfaces with 1px hairlines and tonal steps, and give sticky strips a solid paper background.",
+      "Do use the motion tokens: `--ease-out` for control feedback (150ms) and content fades (200ms), `--ease-drawer` for the sheet (300ms in, 200ms out), with a reduced-motion fallback.",
+      "Do keep the OG hex copies in `src/lib/og/shared.tsx` in sync when a light-theme token changes."
+    ],
+    "donts": [
+      "Don't use signal (or any new hue) for links, hover states, buttons, headings, or channel coding.",
+      "Don't use Vercel or Next.js logos or marks as the site's identity. The wordmark is the text \"Next.js Releases\" in Geist Mono.",
+      "Don't turn the uppercase mono label into an eyebrow or kicker above a heading. It only names a data value.",
+      "Don't add heavier shadows, glass, or blur to resting surfaces. Lift is reserved for overlays.",
+      "Don't add weights beyond 400, 500, and 600, or a third typeface."
+    ]
+  }
+}

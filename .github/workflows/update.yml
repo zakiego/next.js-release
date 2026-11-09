@@ -2,10 +2,18 @@ name: Update Release Data
 
 on:
   schedule:
-    - cron: "0 * * * *" # Run every hour
+    - cron: "0 * * * *" # every hour
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-release-data
+  cancel-in-progress: false
 
 jobs:
-  auto-push:
+  update:
     runs-on: ubuntu-latest
 
     env:
@@ -16,36 +24,30 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install bun
-        uses: oven-sh/setup-bun@v1
+        uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
       - name: Install dependencies
-        run: bun install
+        run: bun install --frozen-lockfile
 
-      - name: Start
-        run: bun run src/lib/data.ts
+      - name: Fetch releases
+        run: bun run update-data
 
-      - name: Configure Git
+      - name: Check for changes
+        id: changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Check for file changes
-        id: file-changed
-        run: |
-          git add -A  # Stage all changes, including new and deleted files
-          git status --porcelain  # Check for any changes in the working directory
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "Changes detected."
-            echo "::set-output name=changed::true"
+          if [ -n "$(git status --porcelain public/data.json)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           else
-            echo "No changes detected."
+            echo "No new releases."
           fi
 
-      - name: Commit and push changes
-        if: steps.file-changed.outputs.changed == 'true'
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
         run: |
-          git add .
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data.json
           git commit -m "Update release data"
           git push origin main
