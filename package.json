@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "node scripts/split-data.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/split-data.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",

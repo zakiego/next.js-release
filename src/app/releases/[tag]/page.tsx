@@ -20,6 +20,7 @@ import {
   getNeighbours,
   getNewest,
   getRelease,
+  getReleaseBody,
   getReleases,
 } from "@/lib/releases.server";
 
@@ -122,7 +123,7 @@ export default async function ReleasePage({ params }: Props) {
       <Separator />
 
       <article aria-label={`Release notes for ${release.tag}`}>
-        <ReleaseNotes body={release.body} className="max-w-[70ch]" />
+        <ReleaseNotes body={getReleaseBody(release)} className="max-w-[70ch]" />
       </article>
 
       <Separator />

@@ -34,14 +34,17 @@ There is no test suite. `bun run typecheck` and `bun run lint` must both pass be
 GitHub API (vercel/next.js releases)
   -> src/lib/data.ts            (Bun script, run hourly by .github/workflows/update.yml)
   -> public/data.json           (~5 MB, ~4,000 releases, committed by the bot)
-  -> src/lib/releases.server.ts (reads the file once, validates with zod, sorts, memoizes)
+  -> scripts/split-data.mjs     (runs before dev and build, validates with zod)
+  -> generated/releases/        (index.json without notes + notes/<id>.md, gitignored)
+  -> src/lib/releases.server.ts (reads the small index once, sorts, memoizes; reads one notes file per release)
   -> pages, API route, OG images
 ```
 
 - A data refresh is a new commit, so a new deploy is the only time data changes. Routes cache until the next deploy. Don't add ISR or revalidation timers.
-- `public/data.json` keeps only the fields the site uses (`id`, `tag_name`, `name`, `html_url`, `prerelease`, `draft`, `published_at`, `body`). It's not a public API. Change `slim()` in `src/lib/data.ts` and the zod schema in `releases.server.ts` together.
+- `public/data.json` keeps only the fields the site uses (`id`, `tag_name`, `name`, `html_url`, `prerelease`, `draft`, `published_at`, `body`). It's not a public API. Change `slim()` in `src/lib/data.ts`, the zod schema in `scripts/split-data.mjs` and the `IndexedRelease` type in `releases.server.ts` together.
+- `generated/releases/` only exists after `bun run dev` or `bun run build` (their `pre` scripts run the split). If a server read fails with ENOENT, run `node scripts/split-data.mjs`.
 - Never hand-edit `public/data.json`. Regenerate it with `bun run update-data`.
-- Routes that read `data.json` at runtime need it listed in `outputFileTracingIncludes` in `next.config.ts`. Add new on-demand routes there too.
+- Routes that read release data at runtime need `generated/releases` listed in `outputFileTracingIncludes` in `next.config.ts`. Add new on-demand routes there too.
 
 ### Routes
 
@@ -81,5 +84,5 @@ GitHub API (vercel/next.js releases)
 ## Gotchas
 
 - `bun run update-data` without `OCTOKIT_TOKEN` hits the unauthenticated GitHub rate limit fast.
-- `data.json` is about 5 MB. Don't import it into a client component or a module that ends up in the client bundle.
+- `data.json` is about 5 MB. Never import it into app code. Servers read `generated/releases`, and the home page sends the board a packed string (`packSummaries` in `src/lib/release.ts`).
 - Release tags can contain characters that need URL encoding. Routes call `decodeURIComponent` on `params.tag`, and links go through `releaseHref()`.

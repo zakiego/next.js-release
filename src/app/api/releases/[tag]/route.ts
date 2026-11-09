@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getRelease } from "@/lib/releases.server";
+import { getRelease, getReleaseBody } from "@/lib/releases.server";
 
 // Rendered on first request and cached until the next deploy. Every data
 // refresh is a new commit, so a deploy is the only time this can change.
@@ -24,6 +24,6 @@ export async function GET(
     tag: release.tag,
     title: release.title,
     url: release.url,
-    body: release.body,
+    body: getReleaseBody(release),
   });
 }

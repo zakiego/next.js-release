@@ -37,5 +37,8 @@ next-env.d.ts
 
 # bun
 bun.lockb
+# release data split at dev/build time (scripts/split-data.mjs)
+/generated/
+
 # impeccable
 .impeccable/hook.cache.json
