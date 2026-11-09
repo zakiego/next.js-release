@@ -54,22 +54,46 @@ async function fetchPage(page: number) {
   return data.map(slim);
 }
 
+// A full refresh walks every page (about 40 requests), so edited notes on
+// old releases and deleted releases reach the site. The hourly run stops
+// at the first page it already knows; the workflow runs --full once a day.
+const FULL = process.argv.includes("--full");
+
+// If a full walk comes back much smaller than what we have, GitHub most
+// likely returned a partial list. Keep the stored data rather than drop it.
+const MIN_FULL_RATIO = 0.95;
+
 async function main() {
   const stored = await readStored();
   const known = new Map(stored.map((r) => [r.id, r]));
   const fetched: StoredRelease[] = [];
 
-  // Walk pages until one overlaps what we already have. A full page of
-  // unknown releases means we may still be behind, so keep going.
+  // Incremental: walk pages until one overlaps what we already have. A full
+  // page of unknown releases means we may still be behind, so keep going.
   for (let page = 1; ; page++) {
     const releases = await fetchPage(page);
     fetched.push(...releases);
-    const reachedKnown = releases.some((r) => known.has(r.id));
-    if (reachedKnown || releases.length < PER_PAGE) break;
+    if (releases.length < PER_PAGE) break;
+    if (!FULL && releases.some((r) => known.has(r.id))) break;
   }
 
-  const fetchedIds = new Set(fetched.map((r) => r.id));
-  const merged = [...fetched, ...stored.filter((r) => !fetchedIds.has(r.id))];
+  let merged: StoredRelease[];
+  if (FULL) {
+    if (fetched.length < stored.length * MIN_FULL_RATIO) {
+      throw new Error(
+        `Full refresh returned ${fetched.length} releases, but ${stored.length} are stored. Refusing to drop them.`,
+      );
+    }
+    const fetchedIds = new Set(fetched.map((r) => r.id));
+    const removed = stored.filter((r) => !fetchedIds.has(r.id));
+    if (removed.length) {
+      console.log(`Removing ${removed.length} deleted: ${removed.map((r) => r.tag_name).join(", ")}`);
+    }
+    merged = fetched;
+  } else {
+    const fetchedIds = new Set(fetched.map((r) => r.id));
+    merged = [...fetched, ...stored.filter((r) => !fetchedIds.has(r.id))];
+  }
 
   const next = JSON.stringify(merged, null, 2) + "\n";
   const current = (await Bun.file(DATA_PATH).exists())
