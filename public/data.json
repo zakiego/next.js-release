@@ -1,5 +1,25 @@
 [
   {
+    "id": 439758388,
+    "tag_name": "v16.5.0-canary.46",
+    "name": "v16.5.0-canary.46",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.46",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-09T23:50:26Z",
+    "body": "### Core Changes\n\n- Resolve parallel route params from the URL when predicting routes: #101477\n- Prevent prerenders from changing foreground response status: #101295\n- Release fetch cache locks when origin fetch throws synchronously: #101461\n- Don't block the dev overlay on the npm registry version check: #100628\n- Fix deployed RSC responses after static-to-partial revalidation: #101454\n- docs: enable the testing API at build and server startup: #101443\n\n### Misc Changes\n\n- turbo-tasks: pack CellKey into one word: #101393\n- Turbopack: use bincode fixint encoding for ids and persisted hashes: #101419\n- [evals] Move fixtures to AI SDK 7: #101470\n- Turbopack: migrate CSS snapshot tests to execution tests: #101232\n- Turbopack: migrate basic snapshot tests to execution tests: #101231\n- Turbopack: migrate tree-shaking and scope-hoisting snapshot tests to execution tests: #101230\n- Turbopack: migrate ESM export optimization snapshot tests to execution tests: #101229\n- Turbopack: migrate CommonJS tree-shaking snapshot tests to execution tests: #101228\n- Turbopack: migrate comptime snapshot tests to execution tests: #101227\n- Turbopack: migrate import and resolution snapshot tests to execution tests: #101211\n- Require real router interactions in navigation tests: #101462\n- [create-next-app] Output next steps commands when creating app from template: #99769\n\n### Credits \n\nHuge thanks to @lukesandberg, @acdlite, @unstubbable, @swarnava, @sokra, @ShakilUrRehman21, and @aurorascharff for helping!"
+  },
+  {
+    "id": 436650239,
+    "tag_name": "v16.4.6",
+    "name": "v16.4.6",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.4.6",
+    "prerelease": false,
+    "draft": false,
+    "published_at": "2026-11-09T20:27:17Z",
+    "body": "> [!NOTE]\r\n> This release is backporting bug fixes. It does **not** include all pending features/changes on canary.\r\n\r\n### Core Changes\r\n\r\n- [lts-active] Pin Tailwind to 4.3.3 in create-next-app and tests (#101061, #101176) (#101307)\r\n- [lts-active] Automatically compress route handler responses if not already compressed (#101280)\r\n- [lts-active] Turbopack GC fixes for dev (#100279, #100370) (#101308)\r\n\r\n### Credits\r\n\r\nHuge thanks to @lukesandberg and @eps1lon for helping!\r\n"
+  },
+  {
     "id": 438590231,
     "tag_name": "v16.5.0-canary.45",
     "name": "v16.5.0-canary.45",
