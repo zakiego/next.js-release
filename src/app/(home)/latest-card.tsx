@@ -30,15 +30,17 @@ export function LatestCard({
 }) {
   return (
     <Card
-      aria-label={`${label}: ${release.tag}`}
       className="@container h-full gap-0 overflow-hidden py-0"
     >
-      <CardHeader className="px-5 pt-5 pb-4">
+      {/* Side by side the cards share a height, so the header takes the slack
+          and sits the version on its bottom edge. The perforated rules line up
+          even when one version is fitted smaller than the other. */}
+      <CardHeader className="flex-1 content-end px-5 pt-5 pb-4">
         <CardTitle
           style={{ "--chars": release.tag.length } as React.CSSProperties}
           className="font-mono text-[clamp(1.25rem,calc(100cqi/var(--chars)/0.66),3.5rem)] leading-none font-semibold tracking-[-0.03em] whitespace-nowrap"
         >
-          <Link href={releaseHref(release.tag)} className="rounded-sm">
+          <Link href={releaseHref(release.tag)} translate="no" className="rounded-sm">
             {release.tag}
           </Link>
         </CardTitle>

@@ -4,6 +4,7 @@ import { PanelRightOpenIcon, SearchIcon, SearchXIcon, XIcon } from "lucide-react
 import Link from "next/link";
 import { forwardRef, Fragment } from "react";
 import { ChannelBadge, NewestMark } from "@/components/release/channel-badge";
+import { prefetchNotes } from "@/components/release/notes-sheet";
 import { RelativeTime } from "@/components/release/relative-time";
 import { Button } from "@/components/ui/button";
 import {
@@ -32,9 +33,11 @@ import {
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import {
   formatDate,
+  formatShortDate,
   PAGE_SIZE,
   releaseHref,
   type ReleaseGroup,
+  type ReleaseSummary,
 } from "@/lib/release";
 
 export const CHANNEL_FILTERS = ["all", "stable", "prerelease"] as const;
@@ -47,6 +50,12 @@ const FILTER_LABEL: Record<ChannelFilter, string> = {
 };
 
 const numberFormat = new Intl.NumberFormat("en-US");
+
+// Pre-release tags already spell out their channel ("-canary.44", "-rc.1").
+// On phones, where the Channel column is hidden, only stable rows need a badge.
+function tagNamesChannel(release: ReleaseSummary) {
+  return release.tag.toLowerCase().includes(`-${release.channel}`);
+}
 
 export type BoardViewProps = {
   groups: ReleaseGroup[];
@@ -196,7 +205,7 @@ export const BoardView = forwardRef<HTMLInputElement, BoardViewProps>(
               <TableRow className="hover:bg-transparent">
                 <TableHead className="w-full pl-0 font-mono text-[11px] tracking-wide text-muted-foreground uppercase">Version</TableHead>
                 <TableHead className="w-28 max-sm:hidden font-mono text-[11px] tracking-wide text-muted-foreground uppercase">Channel</TableHead>
-                <TableHead className="w-32 text-right sm:text-left font-mono text-[11px] tracking-wide text-muted-foreground uppercase">Published</TableHead>
+                <TableHead className="w-28 text-right sm:w-32 sm:text-left font-mono text-[11px] tracking-wide text-muted-foreground uppercase">Published</TableHead>
                 <TableHead className="w-28 max-md:hidden font-mono text-[11px] tracking-wide text-muted-foreground uppercase">Age</TableHead>
                 <TableHead className="w-12 pr-0 md:w-24">
                   <span className="sr-only">Notes</span>
@@ -229,14 +238,17 @@ export const BoardView = forwardRef<HTMLInputElement, BoardViewProps>(
                         <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                           <Link
                             href={releaseHref(release.tag)}
-                            className="rounded-sm font-mono font-medium tracking-tight underline-offset-4 hover:underline"
+                            translate="no"
+                            className="rounded-sm font-mono font-medium tracking-tight whitespace-nowrap underline-offset-4 hover:underline"
                           >
                             {release.tag}
                           </Link>
                           {release.tag === newestTag && <NewestMark />}
-                          <span className="sm:hidden">
-                            <ChannelBadge channel={release.channel} />
-                          </span>
+                          {!tagNamesChannel(release) && (
+                            <span className="sm:hidden">
+                              <ChannelBadge channel={release.channel} />
+                            </span>
+                          )}
                         </div>
                       </TableCell>
                       <TableCell className="py-1.5 max-sm:hidden">
@@ -244,7 +256,12 @@ export const BoardView = forwardRef<HTMLInputElement, BoardViewProps>(
                       </TableCell>
                       <TableCell className="tabular py-1.5 text-right font-mono text-[13px] text-muted-foreground sm:text-left">
                         <time dateTime={release.publishedAt}>
-                          {formatDate(release.publishedAt)}
+                          <span className="max-[22.5rem]:hidden">
+                            {formatDate(release.publishedAt)}
+                          </span>
+                          <span className="hidden max-[22.5rem]:inline">
+                            {formatShortDate(release.publishedAt)}
+                          </span>
                         </time>
                       </TableCell>
                       <TableCell className="tabular py-1.5 font-mono text-[13px] text-muted-foreground max-md:hidden">
@@ -256,6 +273,11 @@ export const BoardView = forwardRef<HTMLInputElement, BoardViewProps>(
                           size="sm"
                           aria-label={`Read notes for ${release.tag}`}
                           onClick={() => onOpenNotes?.(release.tag)}
+                          {...(interactive && {
+                            onPointerEnter: () => prefetchNotes(release.tag),
+                            onPointerDown: () => prefetchNotes(release.tag),
+                            onFocus: () => prefetchNotes(release.tag),
+                          })}
                           asChild={!interactive}
                         >
                           {interactive ? (

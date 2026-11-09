@@ -11,6 +11,7 @@ import { Separator } from "@/components/ui/separator";
 import {
   CHANNEL_LABEL,
   formatDate,
+  jsonLdString,
   releaseHref,
   SITE_NAME,
   SITE_URL,
@@ -75,7 +76,7 @@ export default async function ReleasePage({ params }: Props) {
     <main className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 pt-4 pb-12 sm:px-6 sm:pt-8">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }}
       />
 
       <Button asChild variant="ghost" size="sm" className="-ml-3 w-fit">
@@ -93,7 +94,9 @@ export default async function ReleasePage({ params }: Props) {
             {release.line} line
           </span>
         </div>
-        <h1 className="font-mono text-[clamp(2rem,7vw,3.25rem)] leading-[1.05] font-semibold tracking-[-0.03em] text-balance [overflow-wrap:anywhere]">
+        <h1
+          translate="no"
+          className="font-mono text-[clamp(2rem,7vw,3.25rem)] leading-[1.05] font-semibold tracking-[-0.03em] text-balance [overflow-wrap:anywhere]">
           {release.tag}
         </h1>
         {release.title !== release.tag && (
