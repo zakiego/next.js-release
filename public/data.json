@@ -1,5 +1,15 @@
 [
   {
+    "id": 441044090,
+    "tag_name": "v16.5.0-canary.47",
+    "name": "v16.5.0-canary.47",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.47",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-10T23:42:35Z",
+    "body": "### Core Changes\n\n- fix(next/image): detect distortion using intrinsic proportions: #101349\n- Write CPU profiles for next build static workers: #100614\n\n### Misc Changes\n\n- turbo-tasks-backend: process aggregation edge removals after additions and balancing: #100892\n- turbo-tasks-backend: track early aggregation edge removals as follower debt instead of retrying: #100873\n- Skip unused URL effects in web worker constructors: #101297\n- Turbopack: discover snapshot fixtures with custom entries: #101495\n- turbo-tasks: Add AutoSet and OrderedAutoSet benchmarks: #100952\n- turbo-tasks: Support IndexMap backed AutoMap and AutoSet: #100948\n- Turbopack: fix scope-hoisted imports of missing exports: #101482\n- Turbopack: don't suggest already-imported names for missing exports: #101479\n\n### Credits \n\nHuge thanks to @sokra, @jimmyhmiller, and @aurorascharff for helping!"
+  },
+  {
     "id": 439758388,
     "tag_name": "v16.5.0-canary.46",
     "name": "v16.5.0-canary.46",
