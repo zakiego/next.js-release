@@ -1,5 +1,15 @@
 [
   {
+    "id": 442294074,
+    "tag_name": "v16.5.0-canary.48",
+    "name": "v16.5.0-canary.48",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.48",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-11T23:45:08Z",
+    "body": "### Core Changes\n\n- Prerender route handlers that await immediates: #101593\n- Fix orphaned detached telemetry flush processes: #101588\n- Upgrade React from `e84e1492-20261031` to `1620f7b9-20261111`: #101587\n- docs: clarify tag invalidation client effects: #101504\n- Keep dev overlay errors across no-op webpack hot updates: #101532\n\n### Misc Changes\n\n- Turbopack: don't grow effect vectors inside the analyzer arena: #101480\n- Fix metadata route selection with `--debug-build-paths`: #101585\n- eval: generate the docs pointer from the tested Next.js package: #101558\n- Turbopack: scale default disk write concurrency: #101519\n- eval: correct graders for Proxy, instant navigation, and category prefetching: #101523\n- docs: clarify Server Actions configuration: #101549\n- Turbopack: add build cache portability e2e test and fix location-dependent tasks: #100780\n- Turbopack: replace SwcComments with a lightweight MutableComments store: #101543\n- turbo-tasks-backend: merge aggregated data updates for new followers: #100435\n- test: fix keep-alive socket reuse in CSS HMR race helper: #101530\n- turbo-tasks: count task executions in task statistics: #101025\n- test: fix repeated-slashes router push navigation race: #101528\n- next-core: deserialize next.config env and output file tracing globs into typed maps: #100971\n- turbo-tasks: add OrderedJsonValue/OrderedJsonMap with key-order-sensitive equality: #100964\n- turbo-tasks: use OrderedAutoMap/OrderedAutoSet for order-observing values: #100940\n- auto-hash-map: add positional access and IndexMap/IndexSet conversions for ordered maps: #101497\n- test: close lingering prerender-export server connections: #101527\n- test: fix flaky app-root-params-getters/simple: #101525\n- test: fix flaky dev-validation-worker-source-maps: #101524\n- turbo-tasks-malloc: use official mimalloc Rust bindings (v3.6.1): #101518\n- docs: explain complementary Web Vitals and custom metrics APIs: #98968\n\n### Credits \n\nHuge thanks to @unstubbable, @timneutkens, @jimmyhmiller, @aurorascharff, @sokra, @lukesandberg, and @adityareddy-dev for helping!"
+  },
+  {
     "id": 441044090,
     "tag_name": "v16.5.0-canary.47",
     "name": "v16.5.0-canary.47",
