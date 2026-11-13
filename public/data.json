@@ -1,5 +1,15 @@
 [
   {
+    "id": 443622784,
+    "tag_name": "v16.5.0-canary.49",
+    "name": "v16.5.0-canary.49",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.49",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-12T23:46:11Z",
+    "body": "### Core Changes\n\n- Optimize NFT base path mapping: #101151\n- Fix `ImageResponse` prerendering with `--debug-prerender`: #101678\n- Upgrade React from `1620f7b9-20261111` to `df6aa4ec-20261112`: #101673\n- Fix ESLint link rule for constant and mapped hrefs: #101641\n- Complete metadata references and fix descriptor resolution: #101547\n- docs: clarify dynamicParams with Cache Components: #100249\n- Test Proxy Link headers across cache revalidation: #101620\n- Remove obsolete prerender abort workarounds: #101621\n- Use forward slashes in route bundle stats chunk paths: #101617\n- Preserve build diagnostics during worker shutdown: #101598\n\n### Misc Changes\n\n- turbo-tasks-backend: keep the active count inline: #101486\n- turbopack: use static for shared rcstr! values and hardcode magic identifiers: #101686\n- docs: clarify synchronous IO after request data: #101685\n- turbo-persistence: remove ParallelScheduler::block_in_place: #101544\n- Turbopack: release freed memory right after project shutdown: #101529\n- turbo-tasks-backend: read collectibles and update the reader dependency atomically: #101548\n- [internal-skills] fetch CI status on demand instead of blocking on --wait: #101661\n- Fix pnpm-lock.yaml for bench/large-app-router after React upgrade: #101642\n- bench: add generated large App Router benchmark for Turbopack scaling: #101502\n- test: fix flaky vary-params-base-dynamic prefetch collection: #101531\n- test: fit cold-cache npm install in create-next-app template test timeout: #101625\n- docs: add native DOM examples to Activity guide: #101581\n- turbo-persistence: report batch_get misses from batch_lookup_entry: #101615\n- create-next-app: exit with code 1 when installation fails: #101624\n- Strengthen documentation review criteria: #101622\n- Turbopack: skip unmatched siblings when building app loader trees: #101535\n- docs: explain runtime config removal on the middleware-to-proxy error page: #101616\n- Turbopack: start whole-app client style groups earlier in production builds: #101612\n- turbo-tasks: don't make parentless transient tasks aggregation roots: #101614\n- turbo-tasks: avoid redundant aggregation roots and root-upper optimization cascades: #101604\n- turbo-persistence: make batch_get callback-oriented: #100678\n\n### Credits \n\nHuge thanks to @lukesandberg, @mischnic, @aurorascharff, @sokra, @unstubbable, @eps1lon, and @icyJoseph for helping!"
+  },
+  {
     "id": 442294074,
     "tag_name": "v16.5.0-canary.48",
     "name": "v16.5.0-canary.48",
