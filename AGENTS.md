@@ -22,7 +22,11 @@ bun run build        # next build
 bun run typecheck    # tsc --noEmit
 bun run lint         # eslint .
 bun run update-data  # fetch new releases into public/data.json, needs OCTOKIT_TOKEN
+bash scripts/setup-worktree.sh  # T3 Code runs it on worktree create: copies .env files from the main checkout, then bun install
+bash scripts/clean-worktree.sh  # T3 Code runs it when a thread settles: deletes node_modules and .next in that worktree
 ```
+
+The T3 actions are in `t3.json`. T3 runs a project's saved actions, not the file, so after a change to it, import them again in Settings > Projects > Actions.
 
 There is no test suite. `bun run typecheck` and `bun run lint` must both pass before any commit. Run `bun run build` when you touch routing, caching, `generateStaticParams`, metadata, or OG images.
 

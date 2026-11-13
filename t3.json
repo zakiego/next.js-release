@@ -1,0 +1,13 @@
+{
+  "$schema": "https://t3.codes/schema/t3.json",
+  "iconPath": "src/app/favicon.ico",
+  "worktreeSubmodules": "none",
+  "scripts": [
+    { "name": "Setup Worktree", "command": "bash scripts/setup-worktree.sh", "icon": "configure", "runOnWorktreeCreate": true, "async": false },
+    { "name": "Clean Worktree", "command": "bash scripts/clean-worktree.sh", "icon": "configure", "runOnSettle": true },
+    { "name": "Dev", "command": "bun run dev", "icon": "play", "stopOnSettle": true, "previewUrl": "http://localhost:3000" },
+    { "name": "Typecheck", "command": "bun run typecheck", "icon": "lint" },
+    { "name": "Lint", "command": "bun run lint", "icon": "lint" },
+    { "name": "Build", "command": "bun run build", "icon": "build" }
+  ]
+}
