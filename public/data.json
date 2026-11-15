@@ -1,5 +1,15 @@
 [
   {
+    "id": 445665342,
+    "tag_name": "v16.5.0-canary.51",
+    "name": "v16.5.0-canary.51",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.51",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-14T23:43:37Z",
+    "body": "### Misc Changes\n\n- turbo-tasks-backend: release the owner task before the reader side of keyed refinement: #101732\n\n### Credits \n\nHuge thanks to @sokra for helping!"
+  },
+  {
     "id": 445135824,
     "tag_name": "v16.5.0-canary.50",
     "name": "v16.5.0-canary.50",
