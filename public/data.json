@@ -1,5 +1,15 @@
 [
   {
+    "id": 446440896,
+    "tag_name": "v16.5.0-canary.52",
+    "name": "v16.5.0-canary.52",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.52",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-15T23:49:25Z",
+    "body": "### Core Changes\n\n- Remove stale .next/dev/types in next typegen and next build: #100612\n- Simplify the code gen that adds deployment ids conditionally: #101785\n\n### Misc Changes\n\n- turbo-tasks-backend: store collectibles dependents in an EdgeSet: #101766\n- turbo-persistence: cover block lengths in CRCs: #100322\n- turbo-persistence: keep used keys across intermediate merges: #101796\n\n### Credits \n\nHuge thanks to @lukesandberg and @sokra for helping!"
+  },
+  {
     "id": 445665342,
     "tag_name": "v16.5.0-canary.51",
     "name": "v16.5.0-canary.51",
