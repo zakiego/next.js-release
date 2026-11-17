@@ -1,5 +1,15 @@
 [
   {
+    "id": 447734182,
+    "tag_name": "v16.5.0-canary.53",
+    "name": "v16.5.0-canary.53",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.53",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-16T23:44:19Z",
+    "body": "### Core Changes\n\n- Lint against new `as any` casts and require a reason to disable it: #101255\n- [no-unsafe-inline] Stop inlining the Turbopack chunk group bootstrap: #97574\n- Omit required-server-files from the Node.js proxy adapter output: #101865\n- Fix duplicate useServerInsertedHTML output in prerendered HTML with cacheComponents: #101147\n- Add experimental native Go proxy support: #101464\n- Point to environment variables in conflicting bundler error: #101826\n- Tolerate dangling symlinks when detecting root convention files: #101827\n\n### Misc Changes\n\n- Fix lint and types CI on uncached @turbopack/nft native builds: #101896\n- turbo-persistence: eagerly open SST files in the background: #101768\n- Fix Rust build regression in bootstrap metadata embedding: #101888\n- test: deflake native-route-go cold Go build tests: #101879\n- turbo-tasks-backend: remove redundant backend field from ExecuteContext: #101849\n- Escalate React internals coupling to the React maintainers: #101878\n- Coalesce Turbopack server component HMR updates reliably: #101877\n- Turbopack: don't read files excluded from output file traces: #101829\n- turbo-tasks: support Vec in keyed cells: #101806\n- docs: align agent PR description guidance with PR template: #101866\n- turbo-tasks-backend: remove keyed dependency edges per task in batches: #101734\n- docs: link cache APIs to distributed tag coordination: #101843\n- docs: clarify view transitions during history navigation: #101863\n- [test] Stabilize cached navigations consistency checks: #101861\n- Turbopack: respect adjustFontFallback: false for next/font/google: #101397\n- Turbopack: skip dangling symlinks when tracing dynamic paths: #101828\n\n### Credits \n\nHuge thanks to @lukesandberg, @wbinnssmith, @sokra, @jamiboym, @eps1lon, @acdlite, @mischnic, @lubieowoce, @timneutkens, @aurorascharff, and @unstubbable for helping!"
+  },
+  {
     "id": 446440896,
     "tag_name": "v16.5.0-canary.52",
     "name": "v16.5.0-canary.52",
