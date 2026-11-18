@@ -1,5 +1,15 @@
 [
   {
+    "id": 449316916,
+    "tag_name": "v16.5.0-canary.54",
+    "name": "v16.5.0-canary.54",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.54",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-17T23:46:34Z",
+    "body": "### Core Changes\n\n- Reject the experimental testing API opt-in without Cache Components: #101952\n- Preserve CSP nonces on static fallback bootstrap scripts: #101953\n- Turbopack: separate file tracing from NFT manifest emission, add dev flag: #101941\n- Clarify the agent handoff for worktree upgrades: #101939\n- refactor: Derive whether PPR is enabled from cacheComponents config in base-server: #101936\n- refactor: Derive whether PPR is enabled from cacheComponents config: #101929\n- perf(build): resolve adapter app page entries via a lookup map: #101880\n- turbo-tasks-backend: stop checking keyed dependencies once a dependent is stale: #101736\n- Run the dev Cache Components validation in an OTel trace of its own: #100690\n- turbo-tasks-backend: delay collectible propagation until tasks are clean: #101748\n- Write short client reference manifest chunk lists as array literals: #101846\n- Fix canary lint: remove `as any` casts in load-manifest.test.ts (@next/internal/no-as-any): #101910\n- Evaluate JS manifests with compileFunction instead of a new context: #101787\n\n### Misc Changes\n\n- turbopack-tracing: sync new vercel/nft unit tests: #101973\n- [test] Cover HTTP methods on prerendered App Pages: #101945\n- docs: clarify instant layout opt-out scope: #101944\n- docs: clarify Vitest Link navigation testing limits: #101943\n- docs: document instant testing in the Playwright guide: #101924\n- Wait for hydration in back-before-hydration third-party write test: #101940\n- review: add [team-members] section to review/OWNERS: #101883\n- fix(routing): prefer exact pathnames after rewrites: #101934\n- chore: don't build tracing-napi by default: #101923\n- Bump to swc 84.1.1: #101860\n- Turbopack: keep mangled compact re-exports in import order: #101920\n- docs: clarify Vitest Node.js compatibility: #101908\n- docs: fix import/export mismatches in API reference snippets: #101921\n- docs: fix BlogNavLink imports in active link examples: #101919\n- Turbopack: list ESM namespace keys in code unit order for the general export registration: #101749\n- docs: clarify native history URL hook update timing: #101907\n- turbopack: narrow chunk group reads on warm rebuilds: #101782\n- turbo-tasks-fs: skip compare-before-write in directories created by the filesystem: #101813\n- Turbopack: opt-in atomic file writes, used for client reference manifests: #101786\n- Turbopack: keep metric-adjusted fallback face for next/font/google when `fallback` is set: #100305\n\n### Credits \n\nHuge thanks to @mischnic, @unstubbable, @aurorascharff, @sokra, @lubieowoce, @jimmyhmiller, @icyJoseph, @0badran, @lukesandberg, and @sleitor for helping!"
+  },
+  {
     "id": 447734182,
     "tag_name": "v16.5.0-canary.53",
     "name": "v16.5.0-canary.53",
