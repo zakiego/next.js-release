@@ -1,5 +1,15 @@
 [
   {
+    "id": 451560531,
+    "tag_name": "v16.5.0-canary.56",
+    "name": "v16.5.0-canary.56",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.56",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-19T16:14:24Z",
+    "body": "### Core Changes\n\n- Support bot and method-based prerender bypass capabilities: #101911\n- Compute Turbopack route bundle stats in Rust: #101540\n- Avoid full-segment writes without Cache Components: #101832\n- Add an experimental Go front server for next start: #101695\n\n### Misc Changes\n\n- Wait for hydration in external-browser-runtime hydration tests: #102060\n- test: skip instant-testing-api-exposure build-rejection test in deploy mode: #102056\n- turbo-tasks-backend benches: skip keyed_deps setup for benchmarks excluded by the filter: #101933\n- turbopack: replace EcmascriptInputTransforms::extend with new/concat turbo tasks: #102010\n- turbopack-trace-server: support xz compressed trace files: #101956\n- turbo-tasks-malloc: bump mimalloc to v3.7.0: #102029\n- turbo-tasks-backend: deterministic re-execution oracle in recompute_dependency test: #102048\n- test: print running test output when CI cancels run-tests: #101724\n\n### Credits \n\nHuge thanks to @unstubbable, @sokra, @zhengdaodeguL, @jamiboym, @mischnic, and @lukesandberg for helping!"
+  },
+  {
     "id": 450674444,
     "tag_name": "v16.5.0-canary.55",
     "name": "v16.5.0-canary.55",
