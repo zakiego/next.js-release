@@ -1,5 +1,15 @@
 [
   {
+    "id": 450674444,
+    "tag_name": "v16.5.0-canary.55",
+    "name": "v16.5.0-canary.55",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.55",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-18T23:45:54Z",
+    "body": "### Core Changes\n\n- fix(ts-plugin): accept quoted prefetch segment config values: #101895\n- Fix Navigation Inspector dark mode contrast: #102008\n- Turbopack: add max_chunk_size to production chunking: #100478\n- refactor: Move minimalMode checks earlier in conditionals: #102004\n- Upgrade React from `df6aa4ec-20261112` to `a8342585-20261117`: #101942\n- Refactor durableUseCacheEntries configuration: #101930\n- Remove unused `didStripLocale` request meta: #101999\n- Widen Turbopack maxDuration to u64: #101116\n- turbo-bincode: remove indexmap/indexset helpers and use OrderedAutoMap/OrderedAutoSet in cells: #101520\n\n### Misc Changes\n\n- [test] Stop using async Client Components: #101948\n- Change REVIEW.md instructions to never at-mention owners: #102001\n- chore: add ast-grep untracked() rule: #101994\n- Add INVALIDATION comments to untracked() calls: #101993\n- chore: switch to ident_string() where possible: #101996\n- docs: clarify Route Handler caching config with Cache Components: #101990\n- Turbopack: detect top-level `this` as CommonJS exports: #101727\n- feat(turbopack): Add EmitOption trait for extensible chunking context configuration: #101001\n- pr-status: look up PR runs by head SHA and load job logs on gh 2.97+: #101707\n- Clarify images.path docs and ungate two routing gate tests: #101582\n- pr-status: flag finished runs that didn't pass but have no failed jobs: #101714\n- Add e2e coverage for next start's HTTP and process behavior: #101710\n- docs: note tsconfig include changes with a custom distDir: #101963\n\n### Credits \n\nHuge thanks to @DominikKoniarz, @samselikoff, @sokra, @lubieowoce, @eps1lon, @mischnic, @aurorascharff, @jamiboym, and @lukesandberg for helping!"
+  },
+  {
     "id": 449316916,
     "tag_name": "v16.5.0-canary.54",
     "name": "v16.5.0-canary.54",
