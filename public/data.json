@@ -1,5 +1,15 @@
 [
   {
+    "id": 452049845,
+    "tag_name": "v16.5.0-canary.57",
+    "name": "v16.5.0-canary.57",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.57",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-19T23:46:02Z",
+    "body": "### Core Changes\n\n- Share trace-style truncation and gzip the Request Insights journal: #102018\n- Preserve agent feedback instructions during temporary telemetry opt-out: #102062\n- Rename the experimental next start front server to Switchyard: #102035\n\n### Example Changes\n\n- examples: inclusion criteria: #93300\n\n### Misc Changes\n\n- docs: clarify Turbopack task inputs and module identity: #102090\n- fix pr-auto-label config members: #102067\n- test: skip service-worker-multiple in deploy mode: #102057\n- Add @samselikoff to team members in OWNERS file: #102023\n- Document instant navigation inspection with browser cookies: #102069\n- docs: explain errors thrown inside use cache: #102064\n\n### Credits \n\nHuge thanks to @wbinnssmith, @mischnic, @icyJoseph, @aurorascharff, @samselikoff, @kassens, and @jamiboym for helping!"
+  },
+  {
     "id": 451560531,
     "tag_name": "v16.5.0-canary.56",
     "name": "v16.5.0-canary.56",
