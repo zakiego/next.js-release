@@ -1,5 +1,15 @@
 [
   {
+    "id": 453274750,
+    "tag_name": "v16.5.0-canary.59",
+    "name": "v16.5.0-canary.59",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.59",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-20T23:42:12Z",
+    "body": "### Core Changes\n\n- switchyard: restore 'in front of' in three test comments: #102082\n- Write Turbopack dist dir metadata from Rust: #101638\n\n### Example Changes\n\n- examples: remove examples built on abandoned libraries: #102092\n- examples: Update storage integrations and remove Grafbase and Xata examples: #100454\n\n### Misc Changes\n\n- Turbopack: take next/dynamic loader availability from chunking for the loadable manifest: #101172\n- Turbopack: keep ?server-data on Pages data endpoint _app/_document modules: #102099\n- Turbopack: report unreadable filesystem cache files clearly: #101980\n- docs: remove generic agent workflow guidance: #102071\n- test: wait for destination render in dynamic-param casing navigation test: #102145\n- turbo-tasks: re-check job counters while stopping: #102142\n- Turbopack: shrink slow tests under Miri: #102135\n- Fix NODE_ENV evaluation through default process imports: #102130\n\n### Credits \n\nHuge thanks to @jamiboym, @lukesandberg, @kassens, @sokra, @icyJoseph, and @mischnic for helping!"
+  },
+  {
     "id": 452414757,
     "tag_name": "v16.5.0-canary.58",
     "name": "v16.5.0-canary.58",
