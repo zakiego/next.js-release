@@ -1,5 +1,15 @@
 [
   {
+    "id": 454053003,
+    "tag_name": "v16.5.0-canary.60",
+    "name": "v16.5.0-canary.60",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.60",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-21T23:43:40Z",
+    "body": "### Core Changes\n\n- switchyard: tell Switchyard the app's route.go paths and workers: #102101\n\n### Misc Changes\n\n- Turbopack: resolve app directory entries in a filesystem-independent order: #102186\n- docs: update Route Handler AI SDK streaming examples: #102192\n\n### Credits \n\nHuge thanks to @sokra, @aurorascharff, and @jamiboym for helping!"
+  },
+  {
     "id": 453274750,
     "tag_name": "v16.5.0-canary.59",
     "name": "v16.5.0-canary.59",
