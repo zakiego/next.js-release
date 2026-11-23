@@ -1,5 +1,15 @@
 [
   {
+    "id": 454822896,
+    "tag_name": "v16.5.0-canary.61",
+    "name": "v16.5.0-canary.61",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.61",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-22T23:42:54Z",
+    "body": "### Core Changes\n\n- [image-optimizer] Add experimental support for @next/safe-image-optimization: #101254\n\n### Misc Changes\n\n- turbo-tasks-backend: report the caller location for missing-task panics: #102169\n- Turbopack: recover from an unreadable persistent cache at startup: #101954\n- Stop publishing Go endpoint output after its handler is removed: #102166\n\n### Credits \n\nHuge thanks to @lukesandberg and @bgw for helping!"
+  },
+  {
     "id": 454053003,
     "tag_name": "v16.5.0-canary.60",
     "name": "v16.5.0-canary.60",
