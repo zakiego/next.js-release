@@ -1,5 +1,15 @@
 [
   {
+    "id": 456113750,
+    "tag_name": "v16.5.0-canary.62",
+    "name": "v16.5.0-canary.62",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.62",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-23T23:47:20Z",
+    "body": "### Core Changes\n\n- switchyard: name gone workers by token, and test the worker events and route table: #102168\n- switchyard: no guessed Content-Type after 103 Early Hints: #102034\n- switchyard: run Go code on at most 4 threads: #101901\n- Link Node crypto prerender errors to the crypto error page: #102252\n- Fix fast setImmediate running before microtasks queued by nextTick: #102237\n- Turbopack: diff server HMR pulls against a Rust-owned loaded-module set: #102016\n- Fix webpack runtime CSS ordering before first app router commit: #102027\n- Document Next.js DevTools and improve badge controls: #102015\n- Restrict proxy.go to App Router applications: #102011\n\n### Misc Changes\n\n- Turbopack: resolve globalThis.process and global.process in the analyzer: #102240\n- docs: clarify placeholder params for empty data sources: #102149\n- docs: distinguish prefetch = 'partial' from the partialPrefetching flag: #102234\n- fix(next-napi-bindings): enable LSE atomics on Linux arm64: #102243\n- turbopack-core: return chunk group kinds instead of cloned chunk groups from ChunkGroupInfo lookups: #102162\n- docs: document Tailwind Turbopack loader setup in CSS guide: #102235\n- docs: remove non-existent renderType from onRequestError example: #74448\n- docs: clarify use server export rules: #102232\n- Fix nondeterministic usages of turbo-tasks `read_dir()`: #102229\n- chore: Add ast-grep rule to require read_dir determinism comments: #102227\n- docs: Add DETERMINISM comments to all turbo-tasks-fs read_dir calls : #102226\n- test: avoid idle-callback starvation in css-client-nav: #102132\n- test: wait for use-cache recovery reload: #102224\n- docs(agents): add rust-turbopack skill for Rust tests and benchmarks: #102179\n- [ci] Fix staging Proxy routing for deploy tests: #102225\n- docs(agents): add rebase-pr skill for rebasing and restacking PRs: #102178\n- docs(agents): add CI reading guide to pr-status-triage: #102176\n- turbo-tasks: fix reversed TaskInput::is_resolved documentation: #102184\n- turbopack: use boxed slices for long-lived list task inputs: #102134\n- docs(agents): add run-tests skill for test bootstrap and flakes: #102177\n- docs: fix mismatched filenames, languages and invalid JS in code examples: #100201\n\n### Credits \n\nHuge thanks to @jamiboym, @aurorascharff, @mischnic, @icyJoseph, @ali-vercel, @lubieowoce, @lukesandberg, @wbinnssmith, @sokra, @hyungjikim, @unstubbable, @timneutkens, and @deveshasawa28 for helping!"
+  },
+  {
     "id": 454822896,
     "tag_name": "v16.5.0-canary.61",
     "name": "v16.5.0-canary.61",
