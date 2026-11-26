@@ -1,5 +1,55 @@
 [
   {
+    "id": 459200815,
+    "tag_name": "v16.5.0-canary.67",
+    "name": "v16.5.0-canary.67",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.67",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-26T10:27:00Z",
+    "body": "### Core Changes\r\n\r\n- Enable durableUseCacheEntries by default: #101922\r\n- Drop experimental_prepare() from the client bundle when the flag is off: #102423\r\n- [image-optimizer] Remove mentions of possible support for ImageResponse from the safe mode option: #102402\r\n\r\n### Misc Changes\r\n\r\n- [cd] Require bot-approved for releases dispatched from release branches: #102437\r\n- docs: use \"random values and timestamps\" in Route Handlers: #102395\r\n- docs: prerender sitemap.js with Cache Components: #102394\r\n\r\n### Credits \r\n\r\nHuge thanks to @mischnic, @sokra, @devjiwonchoi, @bgw, and @icyJoseph for helping!"
+  },
+  {
+    "id": 458754243,
+    "tag_name": "v16.5.0-canary.66",
+    "name": "v16.5.0-canary.66",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.66",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-26T10:26:44Z",
+    "body": "### Core Changes\r\n\r\n- Add migration guidance for removed --no-lint option: #102190\r\n- Revert \"Enable lazy dynamic imports by default in development (#101873)\": #102379\r\n- Support output: 'standalone' with experimental.goRoutes: #102362\r\n- Fix the CLI environment leaking into agent upgrades: #102070\r\n\r\n### Misc Changes\r\n\r\n- docs: explain importing @next/env from native ES modules: #102360\r\n- docs: note that Client Component props add to the page's HTML: #102324\r\n\r\n### Credits \r\n\r\nHuge thanks to @aurorascharff, @jimmyhmiller, @timneutkens, @devjiwonchoi, and @icyJoseph for helping!"
+  },
+  {
+    "id": 457493853,
+    "tag_name": "v16.5.0-canary.65",
+    "name": "v16.5.0-canary.65",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.65",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-26T10:26:28Z",
+    "body": "### Core Changes\r\n\r\n- Enable lazy dynamic imports by default in development: #101873\r\n\r\n### Misc Changes\r\n\r\n- Turbopack: run loaders with the current source content after an edit: #102288\r\n- turbo-tasks-backend: don't panic reconstructing an error chain into a collected task: #102231\r\n- Deopt durable use cache entries on dynamic process.env access: #102094\r\n- Turbopack: limited escape analysis for dynamic process.env access: #102093\r\n\r\n### Credits \r\n\r\nHuge thanks to @sokra, @jimmyhmiller, @lukesandberg, and @mischnic for helping!"
+  },
+  {
+    "id": 457449883,
+    "tag_name": "v16.5.0-canary.64",
+    "name": "v16.5.0-canary.64",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.64",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-26T10:26:12Z",
+    "body": "### Misc Changes\r\n\r\n- Turbopack: only read the requested entries' assets in server HMR pulls: #102272\r\n\r\n### Credits \r\n\r\nHuge thanks to @lukesandberg for helping!"
+  },
+  {
+    "id": 457285480,
+    "tag_name": "v16.5.0-canary.63",
+    "name": "v16.5.0-canary.63",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.63",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-26T10:25:53Z",
+    "body": "### Core Changes\r\n\r\n- Keep the registry lookup from slowing first dev compiles: #101687\r\n- Upgrade React from `a8342585-20261117` to `89d7b2b4-20261123`: #102309\r\n- Keep the local span recorder out of production server bundles: #102308\r\n- Fix lazy dynamic import reloads and module evaluation: #101937\r\n- Add telemetry for experimental.goRoutes: #102294\r\n- Turbopack: stop replaying the last Fast Refresh log on every navigation: #102291\r\n- Allow OpenTelemetry span completion during prerendering: #102188\r\n- DevTools: remove the empty strip in Preferences and mute read-only menu rows: #102286\r\n- Introduce experimental @next/mcp package with auth and tool primitives: #101268\r\n- Switchyard: reset connections to Node instead of closing them: #102164\r\n- switchyard: reuse the proxy's response copy buffers: #101902\r\n\r\n### Example Changes\r\n\r\n- examples: remove more examples built on abandoned libraries: #102263\r\n\r\n### Misc Changes\r\n\r\n- Turbopack: subscribe to page HMR chunk list after client navigation: #102256\r\n- Turbopack: treat process.env.hasOwnProperty(key) as an env var existence check: #102284\r\n- test: poll use-cache revalidation via HTML: #102175\r\n- [turbopack] Canonicalize chunk item order to avoid duplicate chunks: #101951\r\n- bench: add NFT-heavy large app benchmark: #102236\r\n- fix lint warning: #102276\r\n- turbo-tasks: fail executions that use a cell of a task GC collected mid-execution: #102195\r\n\r\n### Credits \r\n\r\nHuge thanks to @wbinnssmith, @devjiwonchoi, @jimmyhmiller, @icyJoseph, @mischnic, @sokra, @timneutkens, @aurorascharff, @andrewimm, @lukesandberg, and @jamiboym for helping!"
+  },
+  {
     "id": 456113750,
     "tag_name": "v16.5.0-canary.62",
     "name": "v16.5.0-canary.62",
