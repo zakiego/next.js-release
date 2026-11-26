@@ -1,5 +1,25 @@
 [
   {
+    "id": 459784574,
+    "tag_name": "v16.5.0-canary.69",
+    "name": "v16.5.0-canary.69",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.69",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-26T19:20:53Z",
+    "body": "### Core Changes\n\n- Upgrade React from `89d7b2b4-20261123` to `edae846a-20261125`: #102463\n- Reword the error for a blocking route loaded while navigations are paused: #102398\n- Say that dev validation is skipped when server caches are bypassed: #102386\n\n### Misc Changes\n\n- test: skip @next/mcp e2e in deploy mode: #102454\n- docs: clarify route groups in route type helpers: #102460\n- docs: lead with use(browser()) for browser-only rendering: #102401\n\n### Credits \n\nHuge thanks to @sokra, @aurorascharff, and @icyJoseph for helping!"
+  },
+  {
+    "id": 459523029,
+    "tag_name": "v16.5.0-canary.68",
+    "name": "v16.5.0-canary.68",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.68",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-26T14:54:15Z",
+    "body": "### Core Changes\n\n- Mark @next/mcp as private: #102446\n- Clarify the Cache Components error for static exports: #101250\n- Add the next/go SDK and move Go Proxy helpers into it: #101874\n\n### Misc Changes\n\n- Fix Go package declaration in native proxy security fixture: #102447\n- Fix Go proxy RSC dot-segment authorization bypass: #102444\n- Go routes: compile route.go/proxy.go directories as importable packages, not package main: #101898\n- ci(trigger_release): print workflow inputs before the approval-gated job: #102442\n- Reassign review owners and update team auto-label roster: #102439\n\n### Credits \n\nHuge thanks to @sokra, @timneutkens, and @aurorascharff for helping!"
+  },
+  {
     "id": 459200815,
     "tag_name": "v16.5.0-canary.67",
     "name": "v16.5.0-canary.67",
