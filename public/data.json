@@ -1,5 +1,15 @@
 [
   {
+    "id": 461148859,
+    "tag_name": "v16.5.0-canary.71",
+    "name": "v16.5.0-canary.71",
+    "html_url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.71",
+    "prerelease": true,
+    "draft": false,
+    "published_at": "2026-11-28T00:04:30Z",
+    "body": "### Core Changes\n\n- [image-optimizer] Add request cancellation support when using nsio: #102405\n- [upgrade] Register the CI upgrade secrets from next upgrade --ci: #102422\n- [upgrade] Ask for the model and effort in next upgrade --ci: #102433\n- [upgrade] Set up CI upgrades with next upgrade --ci: #102432\n- [upgrade] Write handoff files for CI runs: #102427\n- Ship the error pages in the bundled docs: #102499\n- [CC] refactor: restructure sequential task scheduling: #102486\n\n### Misc Changes\n\n- docs: show how to handle react-hooks/purity after connection(): #102500\n- Docs: clarify prerender errors for time, randomness, and crypto: #102245\n- docs: explain intentional empty Suspense fallbacks: #102485\n- docs: clarify Suspense placement for shared session promises: #102468\n\n### Credits \n\nHuge thanks to @bgw, @devjiwonchoi, @aurorascharff, and @lubieowoce for helping!"
+  },
+  {
     "id": 459989964,
     "tag_name": "v16.5.0-canary.70",
     "name": "v16.5.0-canary.70",
